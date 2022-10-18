@@ -1,21 +1,65 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-body{
-    margin: 0;
+body {
+  margin: 0;
 }
 
-body{
-    background-color: #EFE784;
+body {
+  background-color: #efe784;
 }
 
 main {
-    font-family: 'Roboto', sans-serif;
-    margin: 0 auto;
-    width: 900px;
+  font-family: "Roboto", sans-serif;
+  margin: 0 auto;
+  width: 900px;
 }
 
 img {
-    
+  width: 100%;
+}
+
+#intro {
+  background-color: #3e3838;
+  padding: 30px 100px;
+  color: #efe784;
+}
+
+#intro h2 {
+  text-align: center;
+  font-weight: lighter;
+  border-top: 1px solid #efe784;
+  border-bottom: 1px solid #efe784;
+  margin: 0px 300px;
+  padding: 5px 0px;
+}
+
+#avengers {
+  background-color: white;
+  padding: 30px 100px;
+}
+
+#avengers h2 {
+  color: #6cbcb3;
+}
+
+#star {
+  background-color: #6cbcb3;
+  padding: 30px 100px;
+  color: #414544;
+}
+
+#woman {
+  background-color: #3e3838;
+  padding: 30px 100px;
+  color: white;
+}
+
+#footer {
+  background-color: black;
+  padding: 30px 100px;
+}
+
+#logofooter {
 }
