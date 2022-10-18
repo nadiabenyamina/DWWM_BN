@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  margin: 0 auto;
+  width: 900px;
+}
+
+main {
+  font-family: "Roboto", sans-serif;
+  background-color: orange;
+  padding: 10px 50px;
+  color: white;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  color: black;
+  font-size: 20px;
+}
+
+.souspara {
+  color: gray;
+  font-style: italic;
+  margin-left: 180px;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 25px;
+  font-size: 14px;
+}
+
+.liste {
+  color: black;
+  font-size: 16px;
+}
