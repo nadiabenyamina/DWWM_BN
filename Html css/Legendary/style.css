@@ -13,53 +13,112 @@ body {
 main {
   font-family: "Roboto", sans-serif;
   margin: 0 auto;
-  width: 900px;
+  width: 800px;
 }
 
-img {
+.contenant {
+  position: relative;
+}
+
+.head1 {
+  position: absolute;
+  z-index: 1;
   width: 100%;
+}
+
+.head2 {
+  position: absolute;
+  z-index: 2;
+  left: 240px;
+  top: 70px;
+  width: 40%;
+}
+
+.text {
+  position: absolute;
+  z-index: 2;
+  color: #efe784;
+  font-weight: lighter;
+  font-size: 15px;
+  letter-spacing: 20px;
+  left: 270px;
+  top: 180px;
+
 }
 
 #intro {
   background-color: #3e3838;
-  padding: 30px 100px;
   color: #efe784;
+  padding: 300px 100px 50px 100px;
 }
 
 #intro h2 {
-  text-align: center;
-  font-weight: lighter;
+  display: inline-block;
+  margin-left: 36%;
+  font-size: 18px;
+  letter-spacing: 15px;
   border-top: 1px solid #efe784;
   border-bottom: 1px solid #efe784;
-  margin: 0px 300px;
-  padding: 5px 0px;
+  padding: 5px 0px 5px 15px;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: lighter;
+}
+
+p {
+  line-height: 20px;
 }
 
 #avengers {
   background-color: white;
-  padding: 30px 100px;
+  padding: 40px 100px;
 }
 
 #avengers h2 {
   color: #6cbcb3;
 }
 
+#avengers span {
+  color: #6cbcb3;
+}
+
 #star {
   background-color: #6cbcb3;
-  padding: 30px 100px;
   color: #414544;
+  padding: 40px 100px;
+}
+
+#star span {
+  color: white;
 }
 
 #woman {
   background-color: #3e3838;
-  padding: 30px 100px;
   color: white;
+  padding: 40px 100px;
+}
+
+.legende {
+  font-size: 12px;
+}
+
+.imgdoc {
+  width: 100%;
 }
 
 #footer {
   background-color: black;
-  padding: 30px 100px;
+  padding: 30px 0px 20px 50px;
+  color: white;
+  font-size: 12px;
 }
 
-#logofooter {
+#footer img {
+  width: 15%; 
+}
+
+#footer span {
+  color: #efe784;
 }
