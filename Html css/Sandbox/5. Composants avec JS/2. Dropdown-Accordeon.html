@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Sandbox</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body class="bg-light text-dark">
+  <a href="../home.html" class="btn btn-primary text-light bg-dark btn-outline-dark">< Retour au Menu</a >
+
+  <h1 class="text-center mt-5 display-3">Composants</h1>
+  <h2 class="text-center mb-5 display-5">Dropdown / Accordéon</h2>
+
+  <div class="container mb-4">
+    <ul class="nav nav-pills justify-content-center row gy-3 gx-3">
+        <li class="nav-item col-12 col-sm-6 col-lg-3 col-xl-2 text-center ">
+            <a class="p-2 d-block h-100 d-flex align-items-center justify-content-center   btn btn-outline-primary" href="./1. Carousel.html">Carousel</a>
+        </li>
+        <li class="nav-item col-12 col-sm-6 col-lg-3 col-xl-2 text-center">
+            <a class="p-2 d-block h-100 d-flex align-items-center justify-content-center  text-light  btn btn-primary" href="./2. Dropdown-Accordeon.html">Dropdown / Accordeon</a>
+        </li>
+        <li class="nav-item col-12 col-sm-6 col-lg-3 col-xl-2 text-center">
+            <a class="p-2 d-block h-100 d-flex align-items-center justify-content-center    btn btn-outline-primary"
+                href="./3. Modale-Alerte.html">Modale / Alerte</a>
+        </li>
+        <li class="nav-item col-12 col-sm-6 col-lg-3 col-xl-2 text-center">
+            <a class="p-2 d-block h-100 d-flex align-items-center justify-content-center    btn btn-outline-primary"
+                href="./4. Navbar.html">Navbar</a>
+        </li>
+        <li class="nav-item col-12 col-sm-6 col-lg-3 col-xl-2 text-center">
+            <a class="p-2 d-block h-100 d-flex align-items-center justify-content-center    btn btn-outline-primary"
+                href="./5. Menu-rideau.html">Menu-Rideau</a>
+        </li>
+        <li class="nav-item col-12 col-sm-6 col-lg-3 col-xl-2 text-center">
+            <a class="p-2 d-block h-100 d-flex align-items-center justify-content-center    btn btn-outline-primary"
+                href="./6. Tooltip-PopOver-Toast.html">Tooltip-PopOver-Toast</a>
+        </li>
+    </ul>
+  </div>
+<hr>
+<!-- Début de la Leçon -->
+<div class="container p-5 mb-5">
+
+  <h2 class="display-6 mb-3">Créer un bouton dropdown </h2>
+ 
+  <!-- Le Dropdown est composé d'un container qui contient un bouton et une liste déroulante. -->
+  <!-- [dropend] si on veut qu'il s'ouvre vers la droite -->
+  <!-- [dropstart] si on veut qu'il s'ouvre vers la gauche -->
+
+  <!-- <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        Dropdown button
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+      </ul>
+    </div> -->
+
+
+    <h2 class="display-6 mb-3 mt-5">Créer un Accordéon </h2>
+
+    <!-- Un accordéon est une suite de contenu qui peuvent s'ouvrir. -->
+    <!-- Ils sont composés d'un container "clickable", et d'un contenu. -->
+
+    <!-- Si on enlève l'attribut, data-bs-parent les panneaux restent ouverts -->
+   
+    <div class="accordion" id="accordionExample">
+
+        <div class="accordion-item">
+          <!-- button dans h2, étrange mais autorisé -->
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Accordion Item #1
+            </button>
+          </h2>
+
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+
+            <div class="accordion-body">
+              <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Accordion Item #2
+            </button>
+          </h2>
+
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+
+
+        <div class="accordion-item">
+
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Accordion Item #3
+            </button>
+          </h2>
+
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    <h2 class="display-6 mb-3 mt-5">Créer un "collapse"</h2>
+
+    <!-- Le collapse ressemble beaucoup aux accordéons, mais avec un contenu unique. -->
+      
+      <p>
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          Button with data-bs-target
+        </button>
+      </p>
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+          Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+        </div>
+      </div>
+
+</div>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bootstrap Sandbox</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+</head>
+
+<body class="bg-light text-dark">
+  <a href="../home.html" class="btn btn-primary text-light bg-dark btn-outline-dark">< Retour au Menu</a >
+  <h1 class="text-center mt-5 display-3">Les Classes Utilitaires</h1>
+  <h2 class="text-center mb-5 display-5">Typographie II</h2>
+
+  <div class="container mb-4">
+    <ul class="nav nav-pills justify-content-center row gy-3 gx-3">
+      <li class="nav-item col-12 col-sm-6 col-lg-3 col-xl-2 text-center ">
+        <a class="p-2 d-block h-100 d-flex align-items-center justify-content-center btn btn-outline-primary"
+          href="./1. Couleurs.html">Couleurs</a>
+      </li>
+      <li class="nav-item col-12 col-sm-6 col-lg-3 col-xl-2 text-center">
+        <a class="p-2 d-block h-100 d-flex align-items-center justify-content-center btn btn-outline-primary"
+          href="./2. Typographie I.html">Typographie I</a>
+      </li>
+      <li class="nav-item col-12 col-sm-6 col-lg-3 col-xl-2 text-center">
+        <a class="p-2 d-block h-100 d-flex align-items-center justify-content-center btn btn-primary"
+          href="./3. Typographie II.html">Typographie II</a>
+      </li>
+      <li class="nav-item col-12 col-sm-6 col-lg-3 col-xl-2 text-center">
+        <a class="p-2 d-block h-100 d-flex align-items-center justify-content-center  btn btn-outline-primary"
+          href="./4. Tailles-Espacements.html">Tailles
+          / Espacements</a>
+      </li>
+      <li class="nav-item col-12 col-sm-6 col-lg-3 col-xl-2 text-center">
+        <a class="p-2 d-block h-100 d-flex align-items-center justify-content-center  btn btn-outline-primary"
+          href="./5. Display-Positions.html">Display
+          / Positions</a>
+
+      </li>
+    </ul>
+  </div>
+
+  <hr />
+
+  <!-- Début de la leçon -->
+
+  <div class="container py-5">
+
+
+    <h2 class="display-6 my-5">Gérer le "wrapping"</h2>
+
+    <!-- [text-wrap|nowrap|break] -->
+
+    <!-- Text Wrap -->
+    <p class="bg-primary text-light fs-5 mb-5" style="width: 150px">
+      Du texte qui wrap si il n'y plus de place
+    </p>
+
+
+    <!-- Text Break [text-break]  -->
+    <p class="text-break">
+      wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+    </p>
+
+    <h2 class="display-6 my-5">Les balises de changements sémantique</h2>
+    <!-- <mark> Pour souligner un élément important. -->
+    <!-- <del> Le texte était dans le document, mais a été supprimé. -->
+    <!-- <s> Veut dire texte qui n'est plus d'actualité par rapport à l'objet du document. (strikethrough) -->
+    <!-- <ins> Élément qui a été rajouté dans le texte.  -->
+    <!-- <u> Sert à souligner des erreurs.  -->
+    <!-- <small> copyright, texte légal. -->
+    <!-- <strong> Élément important, sérieux, on le met en gras.  -->
+    <!-- <em> Changement de ton au niveau de la lecture. (emphasize)  -->
+
+    <p>You can use the mark tag to <mark>highlight</mark> text.</p>
+    <p><del>This line of text is meant to be treated as deleted text.</del></p>
+    <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+    <p><ins>This line of text is meant to be treated as an addition to thedocument.</ins>
+    </p>
+    <p><u>This line of text will render as underlined.</u></p>
+    <p>
+      <small>This line of text is meant to be treated as fine print.</small>
+    </p>
+    <p><strong>This line rendered as bold text.</strong></p>
+    <p><em>This line rendered as italicized text.</em></p>
+
+
+    <h2 class="display-6 my-5">Les blockquotes</h2>
+    <!-- Faire un "Blockquote" -->
+    <!-- [blockquote] -->
+
+    <blockquote class="">
+      <p>Une "Blockquote" est un texte mis en avant.</p>
+    </blockquote>
+
+
+    <!-- Bloquote Footer -->
+    <!-- [blockquote] sur la citation -->
+    <!-- [blockquote-footer] sur la référence -->
+
+    <figure class="mb-5">
+      <blockquote class="blockquote">
+        <p>
+          “Pour s'améliorer, il faut changer. Donc, pour être parfait, il faut
+          avoir changé souvent.”
+        </p>
+      </blockquote>
+      <figcaption class="blockquote-footer">
+        De Winston Churchill, <cite title="Source Title">Mémoires</cite>
+      </figcaption>
+    </figure>
+
+
+    <h2 class="display-6 my-5">Tronquer le texte </h2>
+    <!-- [text-truncate] -->
+    <!-- On donne une largeur max à l'aide d'une colonne et on tronque -->
+
+    <div class="row">
+      <div class="col-2 text-truncate">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum nesciunt porro laborum fugiat reprehenderit! Dolore.
+      </div>
+    </div>
+
+    <span class="d-inline-block text-truncate mb-5" style="max-width: 150px">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum nesciunt porro laborum fugiat reprehenderit! Dolore.
+    </span>
+
+    <h2 class="display-6 my-5">Créer des listes</h2>
+    <!-- Les listes -->
+    <!-- Sur le parent [list-group] -->
+    <!-- Sur les enfants [list-group-item] -->
+    <!-- .active pour rajouter un item actif -->
+    <!-- .disabled pour griser un élément -->
+
+    <ul class="list-group mb-5">
+      <li class="list-group-item active">item</li>
+      <li class="list-group-item">item</li>
+      <li class="list-group-item">item</li>
+      <li class="list-group-item">item</li>
+      <li class="list-group-item disabled" aria-disabled="true">désactivé</li>
+    </ul>
+
+
+  
+</body>
+
+</html>

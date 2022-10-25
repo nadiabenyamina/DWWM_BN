@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Sandbox</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body class="bg-light text-dark">
+    <a href="../home.html" class="btn btn-primary text-light bg-dark btn-outline-dark">< Retour au Menu</a >
+
+    <h1 class="text-center mt-5 display-3">Disposition</h1>
+    <h2 class="text-center mb-5 display-5">Flexbox</h2>
+
+    <div class="container mb-4">
+        <ul class="nav nav-pills justify-content-center row gy-3 gx-3">
+            <li class="nav-item col-12 col-sm-6 col-lg-3 col-xl-2 text-center ">
+                <a class="p-2 d-block h-100 d-flex align-items-center justify-content-center  btn btn-outline-primary"
+                    href="./1. Grille I.html">Grille I</a>
+            </li>
+            <li class="nav-item col-12 col-sm-6 col-lg-3 col-xl-2 text-center">
+                <a class="p-2 d-block h-100 d-flex align-items-center justify-content-center    btn btn-outline-primary"
+                    href="./2. Grille II.html">Grille II</a>
+            </li>
+            <li class="nav-item col-12 col-sm-6 col-lg-3 col-xl-2 text-center">
+                <a class="p-2 d-block h-100 d-flex align-items-center justify-content-center    btn btn-outline-primary"
+                    href="./3. Colonnes.html">Colonnes</a>
+            </li>
+            <li class="nav-item col-12 col-sm-6 col-lg-3 col-xl-2 text-center">
+                <a class="p-2 d-block h-100 d-flex align-items-center justify-content-center    btn btn-outline-primary"
+                    href="./4. Gouttières.html">Gouttières</a>
+            </li>
+            <li class="nav-item col-12 col-sm-6 col-lg-3 col-xl-2 text-center">
+                <a class="p-2 d-block h-100 d-flex align-items-center justify-content-center    btn btn-primary"
+                    href="./5. Flexbox.html">Flexbox</a>
+            </li>
+        </ul>
+    </div>
+    <hr>
+    <!-- Début de la leçon -->
+    <div class="container p-5 mb-5">
+
+        <h2 class="display-6 mb-3">Utiliser Flexbox sans le système de Grille.</h2>
+        <!-- [d-flex]/ [d-inline-flex] -->
+        <!-- on peut aussi changer le display de manière réactive -->
+        <!-- Exemple : d-sm-flex, d-lg-flex, etc ... -->
+        <!-- Il existe ce genre de classes réactives pour toutes les propriétés liées à Flexbox. -->
+
+        <div class="bg-success p-5 mb-5">
+            <h1 class="text-dark bg-warning p-1">Hello World</h1>
+        </div>
+
+
+        <h2 class="display-6 mb-3">Gérer l'alignement sur le main axis (x de base)</h2>
+        <!-- [justify-content-start|end|center|between|around|evenly] -->
+
+        <div class="d-flex justify-content-between bg-dark p-3 mb-5">
+            <p class="text-dark bg-light m-1 p-1">Hello World</p>
+            <p class="text-dark bg-light m-1 p-1">Hello World</p>
+            <p class="text-dark bg-light m-1 p-1">Hello World</p>
+        </div>
+
+
+        <h2 class="display-6 mb-3">Gérer l'alignement sur le cross axis (y de base)</h2>
+        <!-- [align-items-start|end|center|baseline|strech] -->
+
+        <div class="d-flex align-items-end bg-dark p-3 mb-5" style="height: 200px">
+            <p class="text-dark bg-light m-1 p-1">Hello World</p>
+            <p class="text-dark bg-light m-1 p-1">Hello World</p>
+            <p class="text-dark bg-light m-1 p-1">Hello World</p>
+        </div>
+
+        <h2 class="display-6 mb-3">Gérer la direction rangée / colonne</h2>
+        <!-- [flex-row|column|row-reverse|column-reverse] -->
+
+
+        <div class="d-flex flex-row-reverse justify-content-around bg-dark p-3 mb-5" style="height: 200px">
+            <p class="text-dark bg-light m-1 p-1">Hello World</p>
+            <p class="text-dark bg-light m-1 p-1">Hello World</p>
+            <p class="text-dark bg-light m-1 p-1">Hello World</p>
+        </div>
+
+
+        <h2 class="display-6 mb-3">Aligner un élément : Align self</h2>
+        <!-- [align-self-start|end|center|baseline...] -->
+
+
+        <div class="d-flex bg-dark p-3 mb-5" style="height: 200px">
+            <p class="align-self-center text-dark bg-light m-1 p-1">Hello World</p>
+            <p class="align-self-end text-dark bg-light m-1 p-1">Hello World</p>
+            <p class="text-dark bg-light m-1 p-1">Hello World</p>
+        </div>
+
+
+        <h2 class="display-6 mb-3">Remplir avec fill</h2>
+        <!-- [flex-fill] -->
+        <!-- donne flex: 1 1 auto; -->
+
+        <div class="d-flex bg-dark align-items-center p-3 mb-5">
+            <p class="flex-fill text-dark bg-light m-1 p-1">Hello World</p>
+            <p class="text-dark bg-light m-1 p-1">Hello World</p>
+            <p class="flex-fill text-dark bg-light m-1 p-1">Hello World</p>
+        </div>
+
+
+        <h2 class="display-6 mb-3">Gérer Flex-grow</h2>
+        <!-- [flex-grow-0|1|2...] -->
+
+        <div class="d-flex bg-dark p-3 mb-5">
+            <p class="flex-grow-1 text-dark bg-light m-1 p-1">Hello World</p>
+            <p class="text-dark bg-light m-1 p-1">Hello World</p>
+            <p class="text-dark bg-light m-1 p-1">Hello World</p>
+        </div>
+
+        <h2 class="display-6 mb-3">Gérer Flex-Shrink</h2>
+        <!-- [flex-shrink-0|1] -->
+
+        <div class="d-flex bg-dark p-3 mb-5">
+            <p style="width: 300px flex-shrink-1" class="text-dark bg-light m-1 p-1">Hello World</p>
+            <p style="width: 300px" class="text-dark bg-light m-1 p-1">Lorem ipsum dolor sit amet.</p>
+        </div>
+
+
+        <h2 class="display-6 mb-3">Les marges automatiques horizontales</h2>
+        <!-- [me|ms-auto] -->
+
+        <div class="d-flex bg-dark p-3 mb-5">
+            <p class="ms-auto text-dark bg-light m-1 p-1">Hello World</p>
+            <p class="text-dark bg-light m-1 p-1">Hello World</p>
+        </div>
+
+        
+        <h2 class="display-6 mb-3">Les marges automatiques verticales</h2>
+        <!-- [mt|mb-auto] -->
+
+        <div class="d-flex flex-column bg-dark p-3 mb-5" style="height: 400px">
+            <p class="mb-auto text-dark bg-light m-1 p-1">Hello World</p>
+            <p class="text-dark bg-light m-1 p-1">Hello World</p>
+        </div>
+
+
+        <h2 class="display-6 mb-3">Wrapper les éléments si il n'y a plus de place</h2>
+        <!-- [flex-wrap|nowrap] -->
+
+        <div class="d-flex flex-wrap bg-dark p-3 mb-5" style="width: 400px">
+            <p class="text-dark bg-light m-1 p-1" style="width: 200px;">Hello World</p>
+            <p class="text-dark bg-light m-1 p-1" style="width: 200px;">Hello World</p>
+            <p class="text-dark bg-light m-1 p-1" style="width: 200px;">Hello World</p>
+            <p class="text-dark bg-light m-1 p-1" style="width: 200px;">Hello World</p>
+            <p class="text-dark bg-light m-1 p-1" style="width: 200px;">Hello World</p>
+        </div>
+
+
+        <h2 class="display-6 mb-3">Changer l'ordre des éléments</h2>
+        <!-- [order-1|2|3..] -->
+
+        <div class="d-flex flex-wrap bg-dark p-3 mb-5">
+            <p class="order-2 text-dark bg-light m-1 p-1">Order 1</p>
+            <p class="order-3 text-dark bg-light m-1 p-1">Order 2</p>
+            <p class="order-5 text-dark bg-light m-1 p-1">Order 3</p>
+            <p class="order-1 text-dark bg-light m-1 p-1">Order 4</p>
+            <p class="order-4 text-dark bg-light m-1 p-1">Order 5</p>
+        </div>
+
+
+          
+        <h2 class="display-6 mb-3">Et pour finir : Align content</h2>
+        <!-- Cette propriété sert à gérer l'alignement du contenu qui est passé à la ligne -->
+        <!-- [align-content-center|start|end|etc...] -->
+
+        <div class="d-flex flex-wrap align-content-center bg-dark p-3 mb-5" style="height: 400px">
+            <p class="text-dark bg-light m-1 p-1" style="width: 250px">Hello World</p>
+            <p class="text-dark bg-light m-1 p-1" style="width: 250px">Hello World</p>
+            <p class="text-dark bg-light m-1 p-1" style="width: 250px">Hello World</p>
+            <p class="text-dark bg-light m-1 p-1" style="width: 250px">Hello World</p>
+        </div>
+    </div>
+</body>
+
+</html>
