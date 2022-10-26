@@ -1,0 +1,35 @@
+Faction Front: None
+Faction Back: None
+Faction Designer: None
+
+Suite au voyage de Ari le capitaine..
+Ari réussi à fuir les Aliens, et trouvas finalement le trou noir pour rejoindre Picktopia 
+Mais suite au choc avec les Aliens, Ari à des pertes de mémoires et ne se souvient plus quelle Card utiliser pour aller à Picktopia
+..
+
+Aide Ari
+
+Intégre la maquette
+(versions:ordinateur,tablette,téléphone)
+CSS interdit (sauf exception pour les couleurs /n'utilise pas de MediaQueries)
+
+    -Header:contient une navBar bootstrap
+    Intégre ton logo dans la navBar (à la place du rond gris)
+
+    -Section:contient 4 card bootstrap (Les cards n'ont pas les mêmes valeurs)
+            chaques card contient:
+                1 background image (paysage fantastique)
+                1 paragraphe (Description d'un endroit de Reactopia)
+                1 bouton boostrap (redirection vers une image web (paysage fantastique))
+    -Footer:
+    Intégre une icone Linkedin (+redirection vers ton profil Linkedin)(à la place du rond gris)
+
+colors:
+#141E32
+#FCFCFC
+#000000
+#0084FF
+#EBEBEB
+
+
+ENJOY
