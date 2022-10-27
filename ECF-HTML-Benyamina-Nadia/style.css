@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* ----- Le main pour m'aider à centrer la todo list dans le body pour garder le fond blanc ----- */
+main {
+    margin: 1% 30%;
+}
+
+
+
+/* ----- Le CSS du container_principal qui sert à donner la forme et une couleur à la todo list ----- */
+#container_principal {
+    background-color: lightblue;
+    padding: 40px;
+    font-family: 'Fuzzy Bubbles', cursive;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* ----- CSS concernant le container_boutons ----- */
+#container_boutons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.boutons {
+    display: flex;
+    align-items: center;
+}
+
+/* ----- Ajout des images en fond et modifications des boutons ----- */
+.ajouter {
+    background-image: url(./img/bouton_ajouter.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+    border-color: white;
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+}
+
+.modifier {
+    background-image: url(./img/bouton_modifier.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+    border-color: white;
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+}
+
+.supprimer {
+    background-image: url(./img/bouton_supprimer.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+    border-color: white;
+    width: 40px;
+    height: 40px;
+}
+
+
+
+/* ----- CSS du container_liste ----- */
+#container_liste {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.liste {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ----- Modification de la taille des checkbox de la liste ----- */
+input {
+    width: 30px;
+    height: 30px;
+}
+
+/* ----- Ajout d'un simple border à la class pour délimiter la ligne où l'utilisateur écrira ----- */
+.trait {
+    border-bottom: solid 1px black;
+    width: 90%;
+}
+
+
+
+/* ----- CSS du container_notes ----- */
+#container_notes {
+    background-color: white;
+    padding: 10px 0px 100px 10px;
+    font-size: 20px;
+}
+
+
+
+
+/* ----- Responsive tablette ----- */
+@media screen and (max-width: 748px) {
+    main {
+        margin: 3%;
+    }
+
+    /* ----- Modification de la taille des bouttons ----- */
+    .ajouter, .modifier, .supprimer {
+        width: 30px;
+        height: 30px;
+        }
+}
+
+
+
+/* ----- Responsive téléphone ----- */
+@media screen and (max-width: 360px) {
+    main {
+        margin: 0;
+        padding: 0;
+    }
+
+    #container_principal {
+        padding: 20px;
+    }
+
+    #container_boutons {
+        margin-bottom: 30px;
+    }
+
+    .ajouter, .modifier {
+        margin-right: 10px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .supprimer {
+    width: 30px;
+    height: 30px;
+    }
+
+    .trait {
+        width: 85%;
+    }
+}
