@@ -18,9 +18,9 @@ CSS interdit (sauf exception pour les couleurs /n'utilise pas de MediaQueries)
 
     -Section:contient 4 card bootstrap (Les cards n'ont pas les mêmes valeurs)
             chaques card contient:
-                1 background image (paysage fantastique)
+                1 background image (pirate)
                 1 paragraphe (Description d'un endroit de Reactopia)
-                1 bouton boostrap (redirection vers une image web (paysage fantastique))
+                1 bouton boostrap (redirection vers une image web (paysage fantastique)
     -Footer:
     Intégre une icone Linkedin (+redirection vers ton profil Linkedin)(à la place du rond gris)
 
