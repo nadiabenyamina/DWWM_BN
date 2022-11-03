@@ -6,7 +6,7 @@ if ($nombre > 0) {
     echo "Ce nombre est positif.";
 } elseif ($nombre < 0) {
     echo "Ce nombre est négatif.";
-} else { //NE RIEN METTRE APRES ELSE !!!!
+} else { //NADOU !!! NE MET RIEN APRES LE ELSE !!!
     echo "Ce nombre est nul.";
 }
 
