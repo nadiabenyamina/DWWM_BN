@@ -10,10 +10,11 @@ $question2 = 2;
 $aleatoire = rand(1, 2);
 
 
+
 if ($aleatoire == 1) {
     $question1 = readline("Est-ce une femme ? ");
     if ($question1 == false) {
-        $aleatoire;
+        // $question1 = false; a essayé ?
     }
     elseif ($question1 == true) {
     $question1a = readline("A-t-elle des lunettes ? ");
