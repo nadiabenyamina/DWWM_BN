@@ -3,10 +3,6 @@
 $nb1 = readline("Choisissez un nombre : ");
 $nb2 = readline("Choisissez un second nombre : ");
 
-if (is_int (mixed $nb1 || $nb2)) {
-    echo "good";
-} 
-
 echo "Choisissez l'opération à effectuer," . "\n";
 echo "1. Addition" . "\n";
 echo "2. Multiplication" . "\n";
