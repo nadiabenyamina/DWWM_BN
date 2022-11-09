@@ -2,7 +2,6 @@
 
 $tab1 = [5, 50, 23, 11];
 $tab2 = [10, 1, 4, 3];
-$somme = 0;
 
 $tab3 = [];
 for ($i=0; $i<count($tab1); $i++) {
@@ -11,6 +10,6 @@ for ($i=0; $i<count($tab1); $i++) {
 }
 
 $somme = array_sum($tab3);
-echo $somme;
+echo "La somme totale est de : " . $somme;
 
 ?>
