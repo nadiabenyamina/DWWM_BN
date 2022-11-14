@@ -1,8 +1,7 @@
 <?php
 
 $note = readline("Choisissez le nombre de notes que vous voulez entrer : ");
-$moyenne = 0;
-$somme = 0;
+
 
 $tab = [];
 for ($i=0; $i<$note; $i++) {
