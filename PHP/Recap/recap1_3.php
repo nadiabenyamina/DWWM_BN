@@ -13,32 +13,32 @@ $aleatoire = rand(1, 2);
 
 if ($aleatoire == 1) {
     $question1 = readline("Est-ce une femme ? ");
-    if ($question1 == false) {
-        // $question1 = false; a essayé ?
+    if ($question1 = false) {
+        $question2;
     }
-    elseif ($question1 == true) {
+    elseif ($question1 = true) {
     $question1a = readline("A-t-elle des lunettes ? ");
-    } if ($question1a == true) {
+    } if ($question1a = true) {
         echo "Vous pensez à Madame Leblanc.";
     }
-    else {
+    elseif ($question1a =  FALSE){
         echo "Vous pensez à Mademoiselle Rose.";
     }
 }
 
 if ($aleatoire == 2) {
     $question2 = readline("Est-ce un homme ? ");
-    if ($question2 == false) {
-        $aleatoire;
+    if ($question2 = FALSE) {
+        $question1;
     }
-    elseif ($question2 == true) {
+    elseif ($question2 = true) {
         $question2a = readline("Porte-il un chapeau ? ");
-        if ($question2a == true) {
+        if ($question2a = true) {
             echo "Vous pensez au Professeur Violet";
         }
-        if ($question2a == false) {
+        if ($question2a = false) {
             $question2b = readline("A-t-il une moustache ? ");
-            if ($question2b == true) {
+            if ($question2b = true) {
                 echo "Vous pensez au Colonel Moutarde.";
             }
             else {
