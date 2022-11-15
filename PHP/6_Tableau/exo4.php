@@ -8,3 +8,5 @@ for ($i=0; $i<count($tab1); $i++) {
     $tab3[$i] = $tab1[$i] + $tab2[$i];
     echo $tab3[$i] . "\n";
 }
+
+?>
