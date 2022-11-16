@@ -2,7 +2,11 @@
 
 require("fonction.php");
 
-figure($i);
-$i = 1;
+$garde="";
+$tab=[];
+$z=5;
+
+figure($garde, $tab, $z);
+
 
 ?>

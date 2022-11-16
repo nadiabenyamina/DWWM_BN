@@ -1,4 +1,5 @@
 <?php
+
 $menu = readline("1. Afficher le nom et les notes de chaque élève.
 2. Afficher le nom et la moyenne de chaque élève.
 3. Afficher les notes et la moyenne d'un élève dont le nom sera saisi au clavier.
