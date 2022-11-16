@@ -1,8 +1,6 @@
 <?php
 
 function factoriel($nombre, $fact){
-    $nombre = readline("Entrez un nombre : ");
-    $fact = 1;
     for ($i = 1; $i <= $nombre; $i++) {
         $fact = $fact * $i;
     }

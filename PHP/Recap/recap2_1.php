@@ -1,74 +1,11 @@
 <?php
 
+$voyelle = [" A ", " E ", " I ", " O ", " U ", " Y "];
 
+echo "Les voyelles de l'alphabet sont : ";
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// $tab = [" a "," e "," i "," o "," u "," y "];
-
-// echo "Les voyelles sont ";
-// for ($i = 0; $i < 6 ; $i++){
-// echo $tab[$i];
-// }
+for ($i=0; $i<count($voyelle); $i++){
+    echo $voyelle[$i];
+}
 
 ?>

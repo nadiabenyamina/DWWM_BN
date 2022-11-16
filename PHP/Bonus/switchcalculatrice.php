@@ -24,3 +24,5 @@ switch ($question) {
         echo "Le résultat de votre opération est : " . $nb1 % $nb2;
         break;
 }
+
+?>
