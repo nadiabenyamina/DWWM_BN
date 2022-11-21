@@ -32,7 +32,7 @@ echo "\n";
 // puisse avoir la conversion qu'il aura choisi juste avant
 switch($question){
     case 1 :
-        // 1€ vaut 0.87£ (Angletter) au 16.11.2022 donc on multiplie la saisie de l'utilisateur par ce taux pour avoir la conversion en livre sterling
+        // 1€ vaut 0.87£ (Angleterre) au 16.11.2022 donc on multiplie la saisie de l'utilisateur par ce taux pour avoir la conversion en livre sterling
         $uk = $euro * 0.87;
         echo "Votre montant après convertion vaut " . $uk . " £";
     break;
