@@ -4,41 +4,6 @@
     <h1 class="rounded border border-dark p-2 m-2 text-center text-white bg-success"> POO - Les objets (3)</h1>
 </div>
 
-<table class="table">
-  <thead class="thead-light">
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col"> </th>
-      <th scope="col">Prenom</th>
-      <th scope="col">Adresse</th>
-      <th scope="col">Ville</th>
-      <th scope="col">N° de téléphone</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Parker</td>
-      <td>Peter</td>
-      <td>1290 Avenue of the Americas</td>
-      <td>New York</td>
-      <td>06.22.01.41.59</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
-
 <?php
 class Employe
 {
@@ -59,8 +24,33 @@ class Employe
 
     public function affiche()
     {
-        echo "Nom : " . $this->name . "<br>" . "Prénom : " . $this->prenom . "<br>" . "Adresse : " . 
-        $this->adresse . "<br>" . "Ville : " . $this->ville . "<br>" . "N° de tel : " . $this->tel . "<br>" . "<br>";
+        echo "Nom : " . $this->name . " / " . "Prénom : " . $this->prenom . " / " . "Adresse : " . 
+        $this->adresse . " / " . "Ville : " . $this->ville . " / " . "N° de tel : " . $this->tel . " / " . "<br>";
+    }
+
+    public function affName()
+    {
+      echo $this->name;
+    }
+
+    public function affPrenom()
+    {
+      echo $this->prenom;
+    }
+
+    public function affAdd()
+    {
+      echo $this->adresse;
+    }
+
+    public function affVille()
+    {
+      echo $this->ville;
+    }
+
+    public function affTel()
+    {
+      echo $this->tel;
     }
 }
 
@@ -78,7 +68,64 @@ foreach ($employes as $value){
 }
 
 sort($employes);
+
+
 ?>
+
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nom</th>
+      <th scope="col">Prenom</th>
+      <th scope="col">Adresse</th>
+      <th scope="col">Ville</th>
+      <th scope="col">N° de téléphone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td> <?php $employe1->affName() ?> </td>
+      <td> <?php $employe1->affPrenom() ?> </td>
+      <td> <?php $employe1->affAdd() ?> </td>
+      <td> <?php $employe1->affVille() ?> </td>
+      <td> <?php $employe1->affTel() ?> </td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td> <?php $employe2->affName() ?> </td>
+      <td> <?php $employe2->affPrenom() ?> </td>
+      <td> <?php $employe2->affAdd() ?> </td>
+      <td> <?php $employe2->affVille() ?> </td>
+      <td> <?php $employe2->affTel() ?> </td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td> <?php $employe3->affName() ?> </td>
+      <td> <?php $employe3->affPrenom() ?> </td>
+      <td> <?php $employe3->affAdd() ?> </td>
+      <td> <?php $employe3->affVille() ?> </td>
+      <td> <?php $employe3->affTel() ?> </td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td> <?php $employe4->affName() ?> </td>
+      <td> <?php $employe4->affPrenom() ?> </td>
+      <td> <?php $employe4->affAdd() ?> </td>
+      <td> <?php $employe4->affVille() ?> </td>
+      <td> <?php $employe4->affTel() ?> </td>
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td> <?php $employe5->affName() ?> </td>
+      <td> <?php $employe5->affPrenom() ?> </td>
+      <td> <?php $employe5->affAdd() ?> </td>
+      <td> <?php $employe5->affVille() ?> </td>
+      <td> <?php $employe5->affTel() ?> </td>
+    </tr>
+  </tbody>
+</table>
 
 <?php
 $content = ob_get_clean();
