@@ -15,7 +15,7 @@
     <!-- action="" : détermine l'adresse du script qui recevra le contenu du formulaire -->
     <!-- method="" : Valeurs GET (Les variables sont transmises par l'URL, ce qui les rend visibles et modifiables
         très simplement par l'internaute.) ou POST (Les variables sont transmises de manière cachée.) -->
-    <form action="convert.php" method="post">
+    <form action="convert.php" method="GET">
 
         <!-- input : permet de "saisir" des informations. La forme que prend cette balise est définie par la propriété "type"-->
         <!-- type="texte" : fait apparaître une boîte de saisie de texte sur la page. -->
@@ -27,8 +27,9 @@
                 <option value="usd">$ US</option>
                 <option value="gbp">£ GBP</option>
                 <option value="cad">$ CAD</option>
-                <option value="jpn">¥ JPN</option>
-                <option value="rus">₽ RUB</option>
+                <option value="jpy">¥ JPY</option>
+                <option value="rub">₽ RUB</option>
+
             </select>
         </p>
 
@@ -40,21 +41,29 @@
     </form>
 
     <?php
-    if(isset($_POST["submit"])){
-        $montant = $_POST["montant"];
-        $devise = $_POST["devise"];
+    if(isset($_GET["submit"])){
+        $montant = $_GET["montant"];
+        $devise = $_GET["devise"];
 
         if($devise == "usd"){
             $result = $montant * 1.02;
-            echo $result . "$";
+            echo "Résultat : " . $result . "$";
         }
         elseif($devise == "gbp"){
             $result = $montant * 0.86;
-            echo $result . "£";
+            echo "Résultat : " . $result . "£";
         }
         elseif($devise == "cad"){
             $result = $montant * 1.37;
-            echo $result . "$CAD";
+            echo "Résultat : " . $result . "$ CAD";
+        }
+        elseif($devise == "jpy"){
+            $result = $montant * 145.56;
+            echo "Résultat : " . $result . "¥ JPY";
+        }
+        elseif($devise == "rub"){
+            $result = $montant * 62.35;
+            echo "Résultat : " . $result . "₽ RUB";
         }
     }
 
