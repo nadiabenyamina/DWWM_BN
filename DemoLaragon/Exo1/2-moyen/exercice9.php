@@ -1,0 +1,130 @@
+<?php ob_start() ?>
+
+<div class="container">
+    <h1 class="rounded border border-dark p-2 m-2 text-center text-white bg-warning">MM AUTO</h1>
+</div>
+
+<?php
+require('fonction.php');
+
+// Entité
+class Voiture
+{
+    // attributs en private
+    private $marque;
+    private $model;
+    private $couleur;
+    private $porte;
+    private $electrique;
+
+    // constructeur en public
+    public function __construct($marque, $model, $couleur, $porte, $electrique)
+    {
+        $this->marque = $marque;
+        $this->model = $model;
+        $this->couleur = $couleur;
+        $this->porte = $porte;
+        $this->electrique = $electrique;
+    }
+
+    // fonctions getter pour accéder aux données des attributs
+    public function getMarque()
+    {
+        return $this->marque;
+    }
+
+    public function getModel()
+    {
+        return $this->model;
+    }
+
+    public function getCouleur()
+    {
+        return $this->couleur;
+    }
+
+    public function getPorte()
+    {
+        return $this->porte;
+    }
+
+    public function getElec()
+    {
+        return $this->electrique;
+    }
+
+    // fonctions setter pour changer la valeur d'un des attributs
+    public function setMarque()
+    {
+        $this->marque;
+    }
+
+    public function setModel()
+    {
+        $this->model;
+    }
+
+    public function setCouleur()
+    {
+        $this->couleur;
+    }
+
+    public function setPorte()
+    {
+        $this->porte;
+    }
+
+    public function setElec()
+    {
+        $this->electrique;
+    }
+}
+
+// ajout des différentes voitures  /////// le model est en chaîne de caractère
+$voiture1 = new Voiture('Peugeot', '206', 'Blanche', 5, false);
+$voiture2 = new Voiture('Renault', 'Clio', 'Vert', 3, false);
+$voiture3 = new Voiture('Citroën', 'Ë-C4', 'Rouge', 5, true);
+$voiture4 = new Voiture('Kia', 'Niro', 'Bleu', 5, true);
+$voiture5 = new Voiture('Suzuku', 'Swift', 'Gris', 5, false);
+$voiture6 = new Voiture('Audi', 'TT Coupé', 'Noir', 3, true);
+
+// on les regroupe dans un tableau
+$tabCars = [$voiture1, $voiture2, $voiture3, $voiture4, $voiture5, $voiture6];
+
+sort($tabCars);
+?>
+
+<!-- container pour ranger le tableau -->
+<div class="d-flex flex-wrap justify-content-between">
+    <!-- qu'on affiche ensuite avec le foreach -->
+    <?php foreach ($tabCars as $value) : ?>
+        <div>
+            <?php
+            echo "Marque : " . $value->getMarque() . "<br>";
+            echo "Model : " . $value->getModel() . "<br>";
+            echo "Couleur : " . $value->getCouleur() . "<br>";
+            echo "Portes : " . $value->getPorte() . "<br>";
+            echo "Electrique : " . elecVf($value->getElec()) . "<br>";
+            ?>
+        </div>
+    <?php endforeach ?>
+</div>
+
+<div>
+    <!-- menu deroulant -->
+    <div class="btn-group dropend m-auto">
+        <button type="button" class="btn btn-primary dropdown-toggle text-center" data-bs-toggle="dropdown" aria-expanded="false"> Nos Marques </button>
+        <div class="dropdown-menu dropdown-menu-center">
+            <?php foreach ($tabCars as $value) : ?>
+                <button class="dropdown-item" type="submit" name="<?= $value->getMarque() ?>"> <?= $value->getMarque() ?> </button>
+            <?php endforeach ?>
+        </div>
+    </div>
+
+    <!--  -->
+</div>
+
+<?php
+$content = ob_get_clean();
+require '../template.php';
+?>

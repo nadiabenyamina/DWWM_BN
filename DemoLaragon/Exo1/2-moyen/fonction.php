@@ -41,4 +41,28 @@ function animaux($dicoAnimal, $typeAnimal){
     }
     echo "<br>";
 }
+
+// Exercice 8
+function vraiFaux($typeAnimal){
+    if ($typeAnimal){
+        return $typeAnimal = 'Chat';
+    }
+    else {
+        return $typeAnimal = 'Chien';
+    }
+}
+
+// Exercice 9
+function elecVf($electrique){
+    if ($electrique){
+        return $electrique = 'Oui';
+    }
+    else {
+        return $electrique = 'Non';
+    }
+}
+
+function voitureMarque($cars){
+    
+}
 ?>

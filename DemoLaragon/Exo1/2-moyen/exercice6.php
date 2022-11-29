@@ -1,7 +1,7 @@
 <?php ob_start() ?>
 
 <div class="container">
-    <h1 class="rounded border border-dark p-2 m-2 text-center text-white bg-secondary"> POO - Les objets (2)</h1>
+    <h1 class="rounded border border-dark p-2 m-2 text-center text-white bg-secondary">Ville et Département</h1>
 </div>
 
 <?php
