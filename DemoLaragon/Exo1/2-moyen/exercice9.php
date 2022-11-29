@@ -113,7 +113,8 @@ sort($tabCars);
 <div>
     <!-- menu deroulant -->
     <div class="btn-group dropend m-auto">
-        <button type="button" class="btn btn-primary dropdown-toggle text-center" data-bs-toggle="dropdown" aria-expanded="false"> Nos Marques </button>
+        <!-- bouton pour afficher les marques de voiture -->
+        <button type="button" class="btn btn-primary dropdown-toggle text-center" data-bs-toggle="dropdown" aria-expanded="false" name="btn"> Nos Marques </button>
         <div class="dropdown-menu dropdown-menu-center">
             <?php foreach ($tabCars as $value) : ?>
                 <button class="dropdown-item" type="submit" name="<?= $value->getMarque() ?>"> <?= $value->getMarque() ?> </button>
@@ -121,7 +122,10 @@ sort($tabCars);
         </div>
     </div>
 
-    <!--  -->
+    <!-- l'affichage des marques sélectionnés -->
+    <?php
+    
+    ?>
 </div>
 
 <?php

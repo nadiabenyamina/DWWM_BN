@@ -34,6 +34,8 @@ $animaux4 = new Animaux('Kisha', 6, 'chien');
 // pour regrouper les animaux
 $tabAni = [$animaux1, $animaux2, $animaux3, $animaux4];
 
+sort($tabAni);
+
 if (isset($_GET['btn'])) {
     foreach ($tabAni as $value)
         $value->affichage();

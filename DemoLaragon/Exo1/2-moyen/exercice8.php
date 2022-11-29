@@ -72,6 +72,8 @@ $animaux4 = new Animaux('Kisha', 6, false);
 // on regroupe les animaux dans un tableau
 $tabAnimal = [$animaux1, $animaux2, $animaux3, $animaux4];
 
+sort($tabAnimal);
+
 // if(isset) pour dire au bouton de parcourir et d'afficher le tableau quand on clique dessus
 if (isset($_GET['btnAnimal'])) {
     foreach ($tabAnimal as $value) {
