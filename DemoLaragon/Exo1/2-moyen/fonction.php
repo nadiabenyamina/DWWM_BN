@@ -44,6 +44,7 @@ function animaux($dicoAnimal, $typeAnimal){
 
 // Exercice 8
 function vraiFaux($typeAnimal){
+    // si $typeAnimal est vrai, on retourne (return) 'chat', si c'est faut, on retourne 'chien'
     if ($typeAnimal){
         return $typeAnimal = 'Chat';
     }
@@ -54,6 +55,7 @@ function vraiFaux($typeAnimal){
 
 // Exercice 9
 function elecVf($electrique){
+    // comme la fonction vraiFaux
     if ($electrique){
         return $electrique = 'Oui';
     }
@@ -62,7 +64,32 @@ function elecVf($electrique){
     }
 }
 
-function voitureMarque($cars){
-    
+// Exercice 11
+function woMan($woMan){
+    if ($woMan){
+        return $woMan = 'Homme';
+    }
+    else {
+        return $woMan = 'Femme';
+    }
+}
+
+// Exercice 12
+function tabEd($tabLivres){
+    $tabEd=[];
+    for($i=0;$i<count($tabLivres);$i++){
+        $tabEd[$i]=$tabLivres[$i]->getEdition();
+    }
+    $tabEd=array_unique($tabEd);
+    return $tabEd;
+}
+
+function sdoublonsd($objet){
+    $tab=[];
+    for($i=0;$i<count($objet);$i++){
+        $tab[$i]=$objet[$i]->getdate();
+    }
+    $tab=array_unique($tab);
+    return $tab;
 }
 ?>

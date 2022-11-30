@@ -95,7 +95,7 @@ sort($tabCars);
 ?>
 
 <!-- container pour ranger le tableau -->
-<div class="d-flex flex-wrap justify-content-between">
+<div class="d-flex flex-wrap justify-content-evenly">
     <!-- qu'on affiche ensuite avec le foreach -->
     <?php foreach ($tabCars as $value) : ?>
         <div>
@@ -110,9 +110,9 @@ sort($tabCars);
     <?php endforeach ?>
 </div>
 
-<div>
+<form action="exercice9.php" method="post" style="width:200px" class="m-auto text-center">
     <!-- menu deroulant -->
-    <div class="btn-group dropend m-auto">
+    <div class="btn-group dropend pt-5 pb-3">
         <!-- bouton pour afficher les marques de voiture -->
         <button type="button" class="btn btn-primary dropdown-toggle text-center" data-bs-toggle="dropdown" aria-expanded="false" name="btn"> Nos Marques </button>
         <div class="dropdown-menu dropdown-menu-center">
@@ -124,9 +124,20 @@ sort($tabCars);
 
     <!-- l'affichage des marques sélectionnés -->
     <?php
-    
-    ?>
-</div>
+    foreach ($tabCars as $value) :
+        if(isset($_POST[$value->getMarque()])) : ?>
+            <div>
+                <?php
+                echo "Marque : " . $value->getMarque() . "<br>";
+                echo "Model : " . $value->getModel() . "<br>";
+                echo "Couleur : " . $value->getCouleur() . "<br>";
+                echo "Portes : " . $value->getPorte() . "<br>";
+                echo "Electrique : " . elecVf($value->getElec()) . "<br>";
+                ?>
+            </div>
+        <?php endif ?>
+    <?php endforeach ?>
+</form>
 
 <?php
 $content = ob_get_clean();
