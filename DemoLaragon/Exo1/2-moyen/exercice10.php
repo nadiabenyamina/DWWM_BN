@@ -61,9 +61,9 @@ class Stagiaire
 }
 
 // on instancie les stagiaires
-$stagiaire1 = new Stagiaire('Nadia', [4, 11, 9, 15, 18]);
+$stagiaire1 = new Stagiaire('Nadia', [5.5, 12, 9, 15.5, 18]);
 $stagiaire2 = new Stagiaire('Mickael', [1, 6, 13, 7, 12]);
-$stagiaire3 = new Stagiaire('Noah', [1, 0, 10, 16, 9]);
+$stagiaire3 = new Stagiaire('Noah', [1, 0.5, 10, 16, 9]);
 
 $tab = [$stagiaire1, $stagiaire2, $stagiaire3];
 ?>

@@ -7,13 +7,16 @@
 <?php
 require('fonction.php');
 
+// entité
 class Livres
 {
+    // attributs
     private $titre;
     private $edition;
     private $auteur;
     private $date;
 
+    // constructeur
     public function __construct($titre, $edition, $auteur, $date)
     {
         $this->titre = $titre;
@@ -68,29 +71,35 @@ class Livres
     }
 }
 
-
+// instancie les livres
 $book1 = new Livres('Naruto', 'Kana', 'Masashi Kishimoto', 2002);
 $book2 = new Livres('A Certain Scientific Railgun', 'Noeve-Grafx', 'Kazuma Kamachi', 2021);
 $book3 = new Livres('Hokuto no Ken', 'Kazé', 'Tetsuo Hara', 2008);
 $book4 = new Livres('Dragon Quest - Fly', 'Delcourt/Tonkam', 'Riku Sanjō', 2022);
 $book5 = new Livres('The Promised Neverland', 'Kazé', 'Kaiu Shirai', 2016);
-$book6 = new Livres('Kill la Kill', 'Kana', 'Ryō Akizuki', 2013);
-$book7 = new Livres('Fûka', 'Pika', 'Kōji Seo', 2014);
+$book6 = new Livres('Kill la Kill', 'Kana', 'Ryō Akizuki', 2015);
+$book7 = new Livres('Fûka', 'Pika', 'Kōji Seo', 2017);
+$book8 = new Livres('Shaman King', 'Kana', 'Takei Hiroyuki', 2020);
 
-$tabLivres = [$book1, $book2, $book3, $book4, $book5, $book6, $book7];
-
+// on les réunit dans un tableau
+$tabLivres = [$book1, $book2, $book3, $book4, $book5, $book6, $book7, $book8];
+// qu'on trie dans l'ordre alphabétique
 sort($tabLivres);
+
+// on affecte les fonctions doublons dans des tableaux
+$doubleEdition = doublons($tabLivres);
+$doubleDate = doublon($tabLivres);
 ?>
 
 <div class="text-center fw-bold fs-4 text-decoration-underline pb-3 pt-3">MES LIVRES :</div>
 
-<!-- foreach pour afficher, echo $book car la méthode toString plus haut, div pour centrer -->
+<!-- foreach pour afficher, echo $book car méthode toString plus haut, div pour centrer -->
 <div class="row text-center justify-content-center">
     <?php
     foreach ($tabLivres as $book) : ?>
-    <div class="col-3 border border-dark m-3 p-2">
-        <?php echo $book; ?>
-    </div>
+        <div class="col-3 border border-dark m-3 p-2">
+            <?php echo $book; ?>
+        </div>
     <?php endforeach ?>
 </div>
 
@@ -100,15 +109,16 @@ sort($tabLivres);
 
     <!-- div contenant les boutons et les if(isset) -->
     <div>
-        
+
         <!-- bouton édition -->
         <div class="btn-group dropup ms-3 mb-3">
-            <button type="button" class="btn btn-primary dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false" name="btn"> Edition </button>
+            <button type="button" class="btn btn-primary dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false" name="btn"> Édition </button>
 
             <!-- foreach pour afficher seulement les éditions -->
             <div class="dropdown-menu dropdown-menu-center">
-                <?php foreach ($tab as $value) : ?>
-                    <button class="dropdown-item" type="submit" name="<?= $value->getEdition() ?>"> <?= $value->getEdition() ?> </button>
+                <!-- foreach du tableau $doubleEdition pour avoir seulement les éditions des livres -->
+                <?php foreach ($doubleEdition as $value) : ?>
+                    <button class="dropdown-item" type="submit" name="<?= $value ?>"> <?= $value ?> </button>
                 <?php endforeach ?>
             </div>
         </div>
@@ -119,12 +129,13 @@ sort($tabLivres);
 
             <!-- foreach pour afficher les dates -->
             <div class="dropdown-menu dropdown-menu-center">
-                <?php foreach ($tabLivres as $value) : ?>
-                    <button class="dropdown-item" type="submit" name="<?= $value->getDate() ?>"> <?= $value->getDate() ?> </button>
+                <?php foreach ($doubleDate as $value) : ?>
+                    <button class="dropdown-item" type="submit" name="<?= $value ?>"> <?= $value ?> </button>
                 <?php endforeach ?>
             </div>
         </div>
 
+        <!-- if(isset) pour donner une action au bouton -->
         <div class="fs-5">
             <?php
             foreach ($tabLivres as $value) {

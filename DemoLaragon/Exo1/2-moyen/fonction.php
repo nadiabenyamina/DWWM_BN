@@ -75,20 +75,22 @@ function woMan($woMan){
 }
 
 // Exercice 12
-function tabEd($tabLivres){
-    $tabEd=[];
-    for($i=0;$i<count($tabLivres);$i++){
-        $tabEd[$i]=$tabLivres[$i]->getEdition();
-    }
-    $tabEd=array_unique($tabEd);
-    return $tabEd;
-}
-
-function sdoublonsd($objet){
+function doublons($tabBook){
     $tab=[];
-    for($i=0;$i<count($objet);$i++){
-        $tab[$i]=$objet[$i]->getdate();
+    for($i=0;$i<count($tabBook);$i++){
+        $tab[$i]=$tabBook[$i]->getEdition();
     }
+    $tab=array_unique($tab);
+    return $tab;
+}
+// fonction pour enlever les doublons dans les dates et les éditions avec une boucle for
+function doublon($tabDate){
+    $tab=[];
+    // on parcourt le tableau avant de lui affecter les valeurs contenu dans getDate() ou getEdition()
+    for($i=0;$i<count($tabDate);$i++){
+        $tab[$i]=$tabDate[$i]->getDate();
+    }
+    // puis on utilise la fonction array_unique() pour supprimer les doublons
     $tab=array_unique($tab);
     return $tab;
 }
