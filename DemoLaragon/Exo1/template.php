@@ -47,6 +47,8 @@
                             <a class="dropdown-item" href="../2-moyen/exercice11.php">Exercice 11</a>
                             <a class="dropdown-item" href="../2-moyen/exercice12.php">Exercice 12</a>
                             <a class="dropdown-item" href="../2-moyen/exercice12bis.php">Exercice 12 bis</a>
+                            <a class="dropdown-item" href="../2-moyen/exercice13.php">Exercice 13</a>
+                            <a class="dropdown-item" href="../2-moyen/exercice14.php">Exercice 14</a>
                         </div>
                     </li>
 

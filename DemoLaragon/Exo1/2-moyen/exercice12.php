@@ -1,7 +1,7 @@
 <?php ob_start() ?>
 
 <div class="container">
-    <h1 class="rounded border border-dark p-2 m-2 text-center text-white bg-info"> Librairie de Nadou </h1>
+    <h1 class="rounded border border-dark p-2 m-2 text-center text-white bg-success"> Librairie de Nadou </h1>
 </div>
 
 <?php
@@ -52,22 +52,22 @@ class Livres
 
     public function setTitre()
     {
-        return $this->titre;
+        $this->titre;
     }
 
     public function setEdition()
     {
-        return $this->edition;
+        $this->edition;
     }
 
     public function setAuteur()
     {
-        return $this->auteur;
+        $this->auteur;
     }
 
     public function setDate()
     {
-        return $this->date;
+        $this->date;
     }
 }
 
