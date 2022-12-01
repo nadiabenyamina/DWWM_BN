@@ -81,25 +81,25 @@ $tabLivres = [$book1, $book2, $book3, $book4, $book5, $book6, $book7, $book8];
 
 sort($tabLivres);
 
-$test = doublons($tabLivres);
-$test2 = doublon($tabLivres);
+$doublonEd = doublons($tabLivres);
+$doublonDa = doublon($tabLivres);
 ?>
 
 <div class="text-center fw-bold fs-4 text-decoration-underline pb-3 pt-3">MES LIVRES :</div>
 
 <!-- formulaire avec les boutons -->
-<form action="exercice12bis.php" method="post" class="d-flex flex-wrap justify-content-center mt-3 align-item-center">
+<form action="exercice12bis.php" method="post" class="d-flex flex-wrap justify-content-center mt-3 ">
     <label class="pt-1 fw-bold fs-5">Filtrer par : </label>
 
     <!-- div contenant les boutons et les if(isset) -->
-    <div>
+    <div class="d-flex justify-content-evenly">
         <!-- bouton édition -->
         <div class="btn-group dropdown ms-3 mb-3">
-            <button type="button" class="btn btn-primary dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false" name="btn"> Édition </button>
+            <button type="button" class="btn btn-primary dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false" name="btnEd"> Édition </button>
 
             <!-- foreach pour afficher seulement les éditions -->
             <div class="dropdown-menu dropdown-menu-center">
-                <?php foreach ($test as $value) : ?>
+                <?php foreach ($doublonEd as $value) : ?>
                     <button class="dropdown-item" type="submit" name="<?= $value ?>"> <?= $value ?> </button>
                 <?php endforeach ?>
             </div>
@@ -107,11 +107,11 @@ $test2 = doublon($tabLivres);
 
         <!-- bouton date -->
         <div class="btn-group dropdown ms-3 mb-3">
-            <button type="button" class="btn btn-primary dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false" name="btn"> Date de parution </button>
+            <button type="button" class="btn btn-primary dropdown-toggle " data-bs-toggle="dropdown" aria-expanded="false" name="btnDate"> Date de parution </button>
 
             <!-- foreach pour afficher les dates -->
             <div class="dropdown-menu dropdown-menu-center">
-                <?php foreach ($test2 as $value) : ?>
+                <?php foreach ($doublonDa as $value) : ?>
                     <button class="dropdown-item" type="submit" name="<?= $value ?>"> <?= $value ?> </button>
                 <?php endforeach ?>
             </div>
@@ -119,36 +119,88 @@ $test2 = doublon($tabLivres);
 
         <!-- bouton tout afficher -->
         <div class="btn-group dropdown ms-3 mb-3">
-            <button type="button" class="btn btn-dark" name="btn"> Tout afficher </button>
+            <button type="submit" class="btn btn-dark" name="btnAff"> Tout afficher </button>
         </div>
-
-        <!-- if(isset) des boutons Édition et Date de parution -->
+    </div>
+</form>
+        <!-- if(isset) des boutons Tout afficher, Édition et Date de parution -->
         <div class="fs-5">
             <?php
-            foreach ($test as $value) :
-                if (isset($_POST[$value])) : ?>
-                    <div class="d-flex flex-wrap justify-content-center">
+                if (isset($_POST['btnAff'])) : ?>
+                <div class="d-flex flex-wrap justify-content-center">
                     <?php
-                    $tabImg = ['railgun-tome1', 'Dragon-Quest-The-Adventure-of-Dai', 'fukatome1', 'Hokuto-No-Ken-nouvelle-edition',
-                    'Kill-la-kill', 'Naruto-Tome-1-avec-Sticker-euro', 'Shaman-King-Star-Edition', 'The-Promised-Neverland'];
-                    for ($i=0; $i<count($tabLivres); $i++) : ?>
+                    $tabImg = [
+                        'railgun-tome1', 'Dragon-Quest-The-Adventure-of-Dai', 'fukatome1', 'Hokuto-No-Ken-nouvelle-edition',
+                        'Kill-la-kill', 'Naruto-Tome-1-avec-Sticker-euro', 'Shaman-King-Star-Edition', 'The-Promised-Neverland'
+                    ];
+                    for ($i = 0; $i < count($tabLivres); $i++) : ?>
                         <div class="card m-2" style="width: 18rem;">
-                            <img class="card-img-top" src="/Exo1/2-moyen/img/<?= $tabImg[$i]?>.png" alt="<?= $tabImg[$i]?>">
+                            <img class="card-img-top" src="/Exo1/2-moyen/img/<?= $tabImg[$i] ?>.png" alt="<?= $tabImg[$i] ?>">
 
                             <div class="card-body">
                                 <h5 class="card-title"><?= $tabLivres[$i]->getTitre() ?></h5>
-                                <p class="card-text">Édition : <?= $tabLivres[$i]->getEdition() ?> <br> Auteur : <?= $tabLivres[$i]->getAuteur() ?> 
-                                <br> Date de parution : <?= $tabLivres[$i]->getDate() ?></p>
+                                <p class="card-text">Édition : <?= $tabLivres[$i]->getEdition() ?> <br> Auteur : <?= $tabLivres[$i]->getAuteur() ?>
+                                    <br> Date de parution : <?= $tabLivres[$i]->getDate() ?>
+                                </p>
                             </div>
                         </div>
-                    <?php endfor ?>
-                    </div>;
+                    <?php endfor; ?>
+                </div>
                 <?php endif;
-            endforeach; ?>
-        </div>
-</form>
+            ?>
 
-<!-- container des cards -->
+            <?php
+            for ($i=0; $i<count($tabLivres); $i++) :
+                if (isset($_POST[$tabLivres[$i]->getEdition()])) :
+            ?>
+            <div class="d-flex flex-wrap justify-content-evenly">
+                <?php
+                    $tabImg = [
+                        'railgun-tome1', 'Dragon-Quest-The-Adventure-of-Dai', 'fukatome1', 'Hokuto-No-Ken-nouvelle-edition',
+                        'Kill-la-kill', 'Naruto-Tome-1-avec-Sticker-euro', 'Shaman-King-Star-Edition', 'The-Promised-Neverland'
+                    ];
+                    ?>
+                        <div class="card m-2" style="width: 18rem;">
+                            <img class="card-img-top" src="/Exo1/2-moyen/img/<?= $tabImg[$i] ?>.png" alt="<?= $tabImg[$i] ?>">
+
+                            <div class="card-body">
+                                <h5 class="card-title"><?= $tabLivres[$i]->getTitre() ?></h5>
+                                <p class="card-text">Édition : <?= $tabLivres[$i]->getEdition() ?> <br> Auteur : <?= $tabLivres[$i]->getAuteur() ?>
+                                    <br> Date de parution : <?= $tabLivres[$i]->getDate() ?>
+                                </p>
+                            </div>
+                        </div>
+                </div>
+                <?php endif;
+            endfor;
+            ?>
+
+        <?php
+            for ($i=0; $i<count($tabLivres); $i++) :
+                if (isset($_POST[$tabLivres[$i]->getDate()])) :
+            ?>
+            <div class="d-flex flex-wrap justify-content-center">
+                <?php
+                    $tabImg = [
+                        'railgun-tome1', 'Dragon-Quest-The-Adventure-of-Dai', 'fukatome1', 'Hokuto-No-Ken-nouvelle-edition',
+                        'Kill-la-kill', 'Naruto-Tome-1-avec-Sticker-euro', 'Shaman-King-Star-Edition', 'The-Promised-Neverland'
+                    ];
+                    ?>
+                        <div class="card m-2" style="width: 18rem;">
+                            <img class="card-img-top" src="/Exo1/2-moyen/img/<?= $tabImg[$i] ?>.png" alt="<?= $tabImg[$i] ?>">
+
+                            <div class="card-body">
+                                <h5 class="card-title"><?= $tabLivres[$i]->getTitre() ?></h5>
+                                <p class="card-text">Édition : <?= $tabLivres[$i]->getEdition() ?> <br> Auteur : <?= $tabLivres[$i]->getAuteur() ?>
+                                    <br> Date de parution : <?= $tabLivres[$i]->getDate() ?>
+                                </p>
+                            </div>
+                        </div>
+                </div>
+                <?php endif;
+            endfor;
+            ?>
+        </div>
 
 
 <?php
