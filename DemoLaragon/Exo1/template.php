@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -46,7 +46,6 @@
                             <a class="dropdown-item" href="../2-moyen/exercice10.php">Exercice 10</a>
                             <a class="dropdown-item" href="../2-moyen/exercice11.php">Exercice 11</a>
                             <a class="dropdown-item" href="../2-moyen/exercice12.php">Exercice 12</a>
-                            <a class="dropdown-item" href="../2-moyen/exercice12bis.php">Exercice 12 bis</a>
                             <a class="dropdown-item" href="../2-moyen/exercice13.php">Exercice 13</a>
                             <a class="dropdown-item" href="../2-moyen/exercice14.php">Exercice 14</a>
                         </div>
@@ -56,8 +55,7 @@
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Difficile</a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="../3-difficile/exercice1.php">Exercice 1</a>
-                            <a class="dropdown-item" href="../3-difficile/exercice2.php">Exercice 2</a>
-                            <a class="dropdown-item" href="../3-difficile/exercice3.php">Exercice 3</a>
+                            <a class="dropdown-item" href="../3-difficile/exercice2.php">Exercice 2</a>xvb 
                         </div>
                     </li>
 
