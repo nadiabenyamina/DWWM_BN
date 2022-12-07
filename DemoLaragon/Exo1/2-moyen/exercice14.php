@@ -1,7 +1,7 @@
 <?php ob_start() ?>
 
 <div class="container">
-    <h1 class="rounded border border-dark p-2 m-2 text-center text-white bg-danger"> Ready Player One </h1>
+    <h1 class="rounded border border-dark p-2 m-2 text-center text-white bg-warning"> Ready Player One </h1>
 </div>
 
 <?php
@@ -62,6 +62,7 @@ require('class/class_player.php');
         </div>
     </div>
 </div>
+
 <?php
 $content = ob_get_clean();
 require "../template.php";

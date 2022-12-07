@@ -1,7 +1,7 @@
 <?php ob_start() ?>
 
 <div class="container">
-    <h1 class="rounded border border-dark p-2 m-2 text-center text-white bg-warning"> Maison - méthode statique </h1>
+    <h1 class="rounded border border-dark p-2 m-2 text-center text-white bg-info"> Maison - méthode statique </h1>
 </div>
 
 <?php require ('class/class_maison.php') ?>
