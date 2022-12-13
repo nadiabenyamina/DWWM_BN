@@ -37,6 +37,21 @@ class Maison
     {
         return $this->garde;
     }
+
+    public function setDateCreation($dateCreation)
+    {
+        return $this->dateCreation = $dateCreation;
+    }
+
+    public function setChambre($nbChambre)
+    {
+        return $this->nbChambre = $nbChambre;
+    }
+
+    public function setSurface($surface)
+    {
+        return $this->surface = $surface;
+    }
 }
 
 $maison1 = new Maison(2018, 3, 98);

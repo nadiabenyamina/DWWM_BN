@@ -50,24 +50,24 @@ class Livres
         return $this->date;
     }
 
-    public function setTitre()
+    public function setTitre($titre)
     {
-        $this->titre;
+        $this->titre = $titre;
     }
 
-    public function setEdition()
+    public function setEdition($edition)
     {
-        $this->edition;
+        $this->edition = $edition;
     }
 
-    public function setAuteur()
+    public function setAuteur($auteur)
     {
-        $this->auteur;
+        $this->auteur = $auteur;
     }
 
-    public function setDate()
+    public function setDate($date)
     {
-        $this->date;
+        $this->date = $date;
     }
 }
 

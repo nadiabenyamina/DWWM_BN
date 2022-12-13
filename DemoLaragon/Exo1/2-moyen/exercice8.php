@@ -59,7 +59,7 @@ class Animaux
 
     public function setType($type)
     {
-        echo $this->type = $type;
+        $this->type = $type;
     }
 }
 

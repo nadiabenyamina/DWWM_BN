@@ -5,8 +5,8 @@
 </div>
 
 <?php
-require('class/class_armes.php');
-require('class/class_player.php');
+require('class/14_armes.php');
+require('class/14_player.php');
 ?>
 
 <table class="table">

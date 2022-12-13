@@ -54,29 +54,29 @@ class Voiture
     }
 
     // fonctions setter pour changer la valeur d'un des attributs
-    public function setMarque()
+    public function setMarque($marque)
     {
-        $this->marque;
+        $this->marque = $marque;
     }
 
-    public function setModel()
+    public function setModel($model)
     {
-        $this->model;
+        $this->model = $model;
     }
 
-    public function setCouleur()
+    public function setCouleur($couleur)
     {
-        $this->couleur;
+        $this->couleur = $couleur;
     }
 
-    public function setPorte()
+    public function setPorte($porte)
     {
-        $this->porte;
+        $this->porte = $porte;
     }
 
-    public function setElec()
+    public function setElec($electrique)
     {
-        $this->electrique;
+        $this->electrique = $electrique;
     }
 }
 

@@ -38,19 +38,19 @@ class Personnage
         return $this->sexe;
     }
 
-    public function setNom()
+    public function setNom($nom)
     {
-        $this->nom;
+        $this->nom = $nom;
     }
 
-    public function setAge()
+    public function setAge($age)
     {
-        $this->age;
+        $this->age = $age;
     }
 
-    public function setSexe()
+    public function setSexe($sexe)
     {
-        $this->sexe;
+        $this->sexe = $sexe;
     }
 }
 

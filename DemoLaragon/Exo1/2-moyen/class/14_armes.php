@@ -30,19 +30,19 @@ class Armes
         return $this->idid;
     }
 
-    public function setNom()
+    public function setNom($nom)
     {
-        $this->nom;
+        $this->nom = $nom;
     }
 
-    public function setDegat()
+    public function setDegat($degat)
     {
-        $this->degat;
+        $this->degat = $degat;
     }
 
-    public function setid ()
+    public function setidid ($idid)
     {
-        $this->idid;
+        $this->idid = $idid;
     }
 
     // tostring

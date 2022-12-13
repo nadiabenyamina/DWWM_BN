@@ -26,6 +26,21 @@ class Player
     {
         return $this->force;
     }
+
+    public function setName($name)
+    {
+        return $this->name = $name;
+    }
+
+    public function setPv($pv)
+    {
+        return $this->pv = $pv;
+    }
+
+    public function setForce($force)
+    {
+        return $this->force = $force;
+    }
 }
 
 $player1 = new Player('Mason', 80 , 75);

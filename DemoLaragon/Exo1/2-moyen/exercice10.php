@@ -29,14 +29,14 @@ class Stagiaire
         return $this->notes;
     }
 
-    public function setNom()
+    public function setNom($nom)
     {
-        $this->nom;
+        $this->nom = $nom;
     }
 
-    public function setNotes()
+    public function setNotes($notes)
     {
-        $this->notes;
+        $this->notes = $notes;
     }
 
     // on calcule la moyenne des notes, array_sum pour faire la somme qu'on divise par le nombre de notes avec count

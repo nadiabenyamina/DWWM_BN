@@ -49,6 +49,7 @@
                             <a class="dropdown-item" href="../2-moyen/exercice13.php">Exercice 13</a>
                             <a class="dropdown-item" href="../2-moyen/exercice14.php">Exercice 14</a>
                             <a class="dropdown-item" href="../2-moyen/exercice15.php">Exercice 15</a>
+                            <a class="dropdown-item" href="../2-moyen/exercice16.php">Exercice 16</a>
                         </div>
                     </li>
 
@@ -56,16 +57,13 @@
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Difficile</a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="../3-difficile/exercice1.php">Exercice 1</a>
-                            <a class="dropdown-item" href="../3-difficile/exercice2.php">Exercice 2</a>xvb 
                         </div>
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Armes</a>
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Corrections</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Exercice 1</a>
-                            <a class="dropdown-item" href="#">Exercice 2</a>
-                            <a class="dropdown-item" href="#">Exercice 3</a>
+                            <a class="dropdown-item" href="../corrections/exercice13.php">Exercice 1</a>
                         </div>
                     </li>
                 </ul>
