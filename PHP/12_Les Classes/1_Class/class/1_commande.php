@@ -18,15 +18,18 @@ class Commande
     public function getClient(){return $this->client;}
     public function setClient(){$this->client;}
 
-    public function getListeLC(){return $this->listeLigneCommande;}
-    public function setListeLC(){$this->listeLigneCommande;}
+    public function getListeCommande(){return $this->listeLigneCommande;}
+    public function setListeCommande(){$this->listeLigneCommande;}
 
-    public function affichageCommande()
+    public function affichageCommande($client, $prix)
     {
-        $num = rand(0, 1000);
-        return "Commande n°" . $num;
+        "Prix Total TTC : " . $prix->calculTotalTTC();
     }
-    
-    public function calculTotalTTC(){}
+
+    public function calculTotalTTC($quantite, $prixttc)
+    {
+        $resultat = $quantite->getQuantite() * $prixttc->getPrixUnitaireTTC();
+        return $resultat;
+    }
 }
 ?>

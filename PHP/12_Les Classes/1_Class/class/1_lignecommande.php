@@ -16,16 +16,16 @@ class LigneCommande
     public function getQuantite(){return $this->quantite;}
     public function setQuantite($quantite){$this->quantite = $quantite;}
 
-    public function calculTotalLigneTTC()
+    public function calculTotalLigneTTC($produit)
     {
-        $exemplaire = readline("Combien d'exemplaires ? ");
-        $totalLigne = $exemplaire * $this->prixUnitaireTTC;
-        return $totalLigne;
+        $calcul = $produit->getPrixUnitaireTTC() * $this->quantite;
+        return $calcul;
     }
 
-    public function affichage()
+    public function affichage($produit)
     {
-        // return "Total : " . calculTotalLigneTTC() . "\n\n";
+        $phrase="| Libellé : %40s | Prix : %10s | Quantité : %10s |\n";
+        echo sprintf($phrase, $this->produit, $this->calculTotalLigneTTC($produit), $this->quantite);
     }
 }
 ?>
