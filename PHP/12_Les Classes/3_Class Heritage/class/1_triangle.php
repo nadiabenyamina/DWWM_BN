@@ -18,7 +18,7 @@ class Triangle
 
     public function perimetre()
     {
-        // "au carré²" veut dire "x lui même" Nadia
+        // "au carré²" veut dire "x lui même" Nadia, utilise ta tête
         $hypotenuse = ($this->hauteur**2) + ($this->base**2);
         $perimetre = $this->hauteur + $this->base + $hypotenuse;
         return round($perimetre, 2);
