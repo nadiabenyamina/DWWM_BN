@@ -1,4 +1,4 @@
-1) SELECT / FROM / AS
+Exo 1) SELECT / FROM / AS
 
 1-1. SELECT * FROM personnage
 1-2. SELECT * FROM arme
@@ -9,18 +9,24 @@
 
 
 
-2) COUNT / SUM (somme) / AVG (average, moyenne) / MIN / MAX
+Exo 2) COUNT / SUM (somme) / AVG (average, moyenne) / MIN / MAX
 
 2-1. SELECT COUNT(nom) FROM arme
-2-2. SELECT COUNT(nom) FROM personnage - ou - SELECT COUNT(*) FROM personnage
-2-3. SELECT AVG(level) FROM personnage - ou - SELECT SELECT ROUND(AVG(level), 2) FROM personnage
+2-2. SELECT COUNT(nom) FROM personnage
+			- ou -
+	SELECT COUNT(*) FROM personnage
+2-3. SELECT AVG(level) FROM personnage
+			- ou -
+	SELECT SELECT ROUND(AVG(level), 2) FROM personnage
 2-4. SELECT SUM(baseForce) , SUM(baseAgi) , SUM(baseIntel) FROM classe
 2-5. SELECT MIN(levelMin) , MAX(levelMin) FROM arme
-2-6. SELECT SUM(baseForce) + SUM(baseAgi) + SUM(baseIntel) FROM classe - ou - SELECT SUM(baseForce + baseAgi + baseIntel) FROM classe
+2-6. SELECT SUM(baseForce) + SUM(baseAgi) + SUM(baseIntel) FROM classe
+			- ou -
+	SELECT SUM(baseForce + baseAgi + baseIntel) FROM classe
 
 
 
-3) CONCAT / SUBSTRING / LEFT
+Exo 3) CONCAT / SUBSTRING / LEFT
 
 3-1. SELECT CONCAT(nom, " ", surnom) FROM personnage
 3-2. SELECT CONCAT(nom, " ", baseForce, " ", baseAgi, " ", baseIntel) FROM classe
@@ -29,21 +35,27 @@
 
 
 
-4) WHERE
+Exo 4) WHERE
 
 4-1. SELECT levelMin FROM arme WHERE levelMin >= 5
 4-2. SELECT degat FROM arme WHERE degat < 25
 4-3. SELECT nom, surnom FROM personnage WHERE level = 10
-4-4. SELECT * FROM typearme WHERE estDistance = 1 - ou - SELECT * FROM typearme WHERE estDistance (car par défaut "estDistance" est vraie) - ou - SELECT * FROM typearme WHERE estDistance = TRUE
+4-4. SELECT * FROM typearme WHERE estDistance = 1
+			- ou -
+	SELECT * FROM typearme WHERE estDistance (car par défaut "estDistance" est vraie)
+			- ou -
+	SELECT * FROM typearme WHERE estDistance = TRUE (ou true)
 
 
 
-5) AND / OR / BETWEEN
+Exo 5) AND / OR / BETWEEN
 
 5-1. SELECT levelMin FROM arme WHERE levelMin BETWEEN 4 AND 8
 5-2. SELECT * FROM personnage WHERE idPersonnage < 3 AND level = 10
 5-3. SELECT * FROM arme WHERE levelMin < 4 OR levelMin > 8
-5-4. SELECT * FROM arme WHERE idArme BETWEEN 1 AND 2 AND degat > 30 - ou - SELECT * FROM arme WHERE (idArme = 1 OR idArme = 2) AND degat > 30
+5-4. SELECT * FROM arme WHERE idArme BETWEEN 1 AND 2 AND degat > 30
+			- ou -
+	SELECT * FROM arme WHERE (idArme = 1 OR idArme = 2) AND degat > 30
 5-5. SELECT * FROM arme WHERE idArme BETWEEN 1 AND 2 AND degat BETWEEN 25 AND 40
 5-6. SELECT * FROM personnage WHERE level <> 8 AND level > 7 OR level < 6
 5-7. SELECT COUNT(*) AS `Nombre personnage` FROM personnage WHERE level <> 10
@@ -51,7 +63,8 @@
 
 
 
-6) LIKE / IN / LIMIT / OFFSET / IS NULL
+Exo 6) LIKE / IN / LIMIT / OFFSET / IS NULL
+
 6-1. SELECT * FROM personnage WHERE nom LIKE 'l%'
 6-2. SELECT * FROM personnage WHERE nom LIKE 'l%er'
 6-3. SELECT * FROM arme WHERE nom LIKE '%bois%'
@@ -61,4 +74,6 @@
 6-7. SELECT * FROM personnage WHERE surnom IS NOT NULL
 6-8. SELECT * FROM personnage WHERE surnom IS NULL
 6-9. SELECT * FROM personnage LIMIT 3
-6-10. SELECT * FROM personnage LIMIT 2 OFFSET 3 - ou - SELECT * FROM personnage LIMIT 3, 2
+6-10. SELECT * FROM personnage LIMIT 2 OFFSET 3
+			- ou -
+	SELECT * FROM personnage LIMIT 3, 2
