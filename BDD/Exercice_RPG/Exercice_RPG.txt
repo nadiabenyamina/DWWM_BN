@@ -51,7 +51,7 @@
 
 
 
-6) LIKE / IN LIMIT / OFFSET / IS NULL
+6) LIKE / IN / LIMIT / OFFSET / IS NULL
 6-1. SELECT * FROM personnage WHERE nom LIKE 'l%'
 6-2. SELECT * FROM personnage WHERE nom LIKE 'l%er'
 6-3. SELECT * FROM arme WHERE nom LIKE '%bois%'
