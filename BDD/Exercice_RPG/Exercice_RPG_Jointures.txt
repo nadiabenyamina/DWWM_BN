@@ -11,6 +11,8 @@
 
 2-1. SELECT personnage.nom, classe.nom FROM personnage
 	INNER JOIN classe ON personnage.idClasse = classe.idClasse
+2-2. SELECT p.nom , c.nom FROM personnage p
+	INNER JOIN classe c ON p.idClasse = c.idClasse;
 2-2. SELECT personnage.nom AS `Nom perso` , classe.nom AS `Nom classe` FROM personnage 
 	INNER JOIN classe ON personnage.idClasse = classe.idClasse
 2-3. SELECT * FROM personnage 
@@ -19,3 +21,67 @@
 	FROM personnage 
 	INNER JOIN arme ON personnage.idArmeUtilise = arme.idArme
 	INNER JOIN typearme ON arme.idTypeArme = typearme.idTypeArme
+
+
+
+3) Jointures et filtres
+
+3-1. SELECT p.nom, p.level, a.nom AS `weapon`, a.levelMin 
+	FROM arme a
+	INNER JOIN dispose d ON d.idArme = a.idArme
+	INNER JOIN personnage p ON p.idPersonnage = d.idPersonnage
+3-2. SELECT a.nom, a.levelMin, a.degat, ta.libelle FROM arme a 
+	INNER JOIN typearme ta ON ta.idTypeArme = a.idTypeArme 
+	WHERE estDistance = FALSE
+3-3.	SELECT p.nom, a.nom AS `weapon`, ta.libelle AS `type d'arme`
+	FROM personnage p 
+	INNER JOIN dispose d ON p.idPersonnage = d.idPersonnage
+	INNER JOIN arme a ON d.idArme = a.idArme
+	INNER JOIN typearme ta ON ta.idTypeArme = a.idTypeArme
+	WHERE p.idClasse = 1
+ 
+
+
+4) Jointures, calculs et tris
+
+4-1. SELECT p.idPersonnage , p.nom AS `Perso`, a.nom , ta.libelle
+	FROM arme a
+	INNER JOIN dispose d ON d.idArme = a.idArme
+	INNER JOIN personnage p ON p.idPersonnage = d.idPersonnage
+	INNER JOIN typearme ta ON ta.idTypeArme = a.idTypeArme
+	WHERE p.level = 10
+4-2. SELECT p.idPersonnage , p.nom AS `Perso`, a.nom , ta.libelle
+	FROM arme a
+	INNER JOIN dispose d ON d.idArme = a.idArme
+	INNER JOIN personnage p ON p.idPersonnage = d.idPersonnage
+	INNER JOIN typearme ta ON ta.idTypeArme = a.idTypeArme
+	WHERE p.level = 10
+	ORDER BY p.idPersonnage
+4-3. SELECT ROUND(AVG(a.degat), 2) AS `Moyenne`
+	FROM arme a
+	INNER JOIN typearme ta ON ta.idTypeArme = a.idTypeArme
+	WHERE estDistance
+4-4. SELECT *
+	FROM personnage p
+	INNER JOIN arme a ON a.idArme = p.idArmeUtilise
+	INNER JOIN typearme ta ON ta.idTypeArme = a.idTypeArme
+	WHERE ta.libelle LIKE 'a%'
+
+
+
+5) Les jointures externes
+5-1. SELECT *
+	FROM typearme ta
+	LEFT JOIN arme a ON a.idTypeArme = ta.idTypeArme
+5-2. SELECT *
+	FROM arme a
+	RIGHT JOIN typearme ta ON ta.idTypeArme = a.idTypeArme
+5-3. SELECT *
+	FROM arme a 
+	LEFT JOIN personnage p ON p.idArmeUtilise = a.idArme
+	ORDER BY a.levelMin
+5-4. SELECT *
+	FROM personnage p
+	RIGHT JOIN dispose d ON d.idPersonnage = p.idPersonnage
+	RIGHT JOIN arme a ON a.idArme = d.idArme
+	ORDER BY p.nom
