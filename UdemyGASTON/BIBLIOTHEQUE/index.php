@@ -21,13 +21,18 @@ try {
                 if (empty($url[1])) {
                     $livreController->afficherLivres();
                 } elseif ($url[1] === "l") {
-                    echo $livreController->afficherLeLivre($url[2]);
+                    $livreController->afficherLeLivre($url[2]);
                 } elseif ($url[1] === "a") {
-                    echo "AJOUTER D'UN LIVRE";
+                    $livreController->ajoutLivre();
                 } elseif ($url[1] === "m") {
-                    echo "MODIFIER D'UN LIVRE";
+                    $livreController->modificationLivre($url[2]);
+                    // echo $url[2];
                 } elseif ($url[1] === "s") {
-                    echo "SUPPRIMER D'UN LIVRE";
+                    $livreController->suppressionLivre($url[2]);
+                } elseif ($url[1] === "av") {
+                    $livreController->ajoutLivreValidation();
+                } elseif ($url[1] === "mv") {
+                    $livreController->modificationLivreValidation();
                 }
                 else {
                     // url=0

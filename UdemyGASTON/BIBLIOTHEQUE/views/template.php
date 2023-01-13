@@ -13,7 +13,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="accueil">Accueil</a>
+            <a class="navbar-brand" href="<?= URL ?>accueil">Accueil</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -23,7 +23,7 @@
                         <a class="nav-link active" href="accueil">Accueil</a>
                     </li> -->
                     <li class="nav-item">
-                        <a class="nav-link active" href="livres">Livres</a>
+                        <a class="nav-link active" href="<?= URL ?>livres">Livres</a>
                     </li>
                 </ul>
             </div>

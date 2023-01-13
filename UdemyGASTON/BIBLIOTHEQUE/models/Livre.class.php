@@ -3,17 +3,15 @@ class Livre
 {
     private $id;
     private $titre;
-    private $auteur;
     private $nbPages;
     private $image;
 
     
 
-    public function __construct($id, $titre, $auteur, $nbPages, $image)
+    public function __construct($id, $titre, $nbPages, $image)
     {
         $this->id=$id;
         $this->titre=$titre;
-        $this->auteur=$auteur;
         $this->nbPages=$nbPages;
         $this->image=$image;
         
@@ -25,9 +23,6 @@ class Livre
 
     public function getTitre(){return $this->titre;}
     public function setTitre($titre){$this->titre = $titre;}
-
-    public function getAuteur(){return $this->auteur;}
-    public function setAuteur($auteur){$this->auteur = $auteur;}
 
     public function getNbPages(){return $this->nbPages;}
     public function setNbPages($nbPages){$this->nbPages = $nbPages;}
