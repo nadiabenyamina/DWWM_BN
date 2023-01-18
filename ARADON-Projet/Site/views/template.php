@@ -8,11 +8,6 @@
     <link rel="stylesheet" href="css/style.css">
     <title>The Last Of Us</title>
 
-    <!-- <style>
-        .navbar {
-            background-color: #3A3026;
-        }
-    </style> -->
 </head>
 
 <body>
@@ -20,22 +15,22 @@
     <nav class="navbar">
         <div class="nav-links">
             <ul class="barre">
-                <li><a href="#">Accueil</a></li>
-                <li><a href="../views/histoire.view.php">Histoire</a></li>
-                <li><a href="../views/jeux.view.php">Jeux</a></li>
-                <li><a href="../views/personnages.view.php">Personnages</a></li>
-                <li><a href="../views/bd.view.php">Bande Dessiné</a></li>
-                <li><a href="../views/serie.view.php">Série</a></li>
+                <li><a href="<?=URL?>accueil">Accueil</a></li>
+                <li><a href="<?=URL?>naughtydog">Naughty Dog</a></li>
+                <li><a href="<?=URL?>jeux">Jeux</a></li>
+                <li><a href="<?=URL?>personnages">Personnages</a></li>
+                <li><a href="<?=URL?>bd">Bande Dessinée</a></li>
+                <li><a href="<?=URL?>serie">Série</a></li>
             </ul>
         </div>
         <div>
-            <button>Connexion</button>
-            <button>Inscription</button>
+            <button><a href="<?=URL?>connexion">Connexion</a> </button>
+            <button><a href="<?=URL?>inscription">Inscription</a></button>
         </div>
     </nav>
     <!-- Fin barre navigation -->
 
-    <div>
+    <div class="content">
         <?= $content ?>
     </div>
     
@@ -45,8 +40,8 @@
             <a href=""></a>
         </div>
         <ul>
-            <li>CONTACT</li>
-            <li>Mentions légales</li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Mentions légales</a></li>
         </ul>
     </footer>
 </body>

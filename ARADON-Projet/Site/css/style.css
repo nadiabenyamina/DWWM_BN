@@ -6,34 +6,22 @@
     list-style: none;
 }
 
+/* hauteur minimum du html et du body de 100% */
+html, body {
+    height: 100%;
+}
+
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ECBB73;
+    /* position relative sur le body pour pouvoir fixer le footer en bas de page */
+    position: relative;
 }
 
-/* Page d'accueil */
-.bg-image {
-    height: 100vh;
-    width: 100vw;
-    background-image: url('../images/tlouwallpaper.jpg');
-    background-size: cover;
-    opacity: 90%;
-}
-
-.bg-image h1 {
-    font-size: 50px;
-    color: white;
-    text-align: center;
-    /* text-shadow: horizontal, vertical, flou(blur), couleur */
-    text-shadow: 0px 5px 5px #000000;
-    padding: 20px 0px;
-}
-
-.bg-image p {
-    color: white;
-    text-align: center;
-    text-shadow: 0px 5px 5px #000000;
-    font-size: 25px;
-    margin-top: 50px;
+/* contenu des pages avec une hauteur minimum de 100% */
+.content {
+    min-height: 100%;
 }
 
 /* Barre de navigation */
@@ -59,20 +47,85 @@ body {
     margin: 0px 10px;
 }
 
-/* .navbar .ul .bouton {
-    margin: 0 30px;
-} */
-
 /* Footer */
 footer {
+    /* position absolute pour fixer le footer en bas de page */
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
     padding: 20px;
     width: 100vw;
     background-color: #3A3026;
     display: flex;
     justify-content: space-between;
+    color: white;
+}
+
+footer a {
+    color: white;
 }
 
 footer ul {
     display: flex;
     justify-content: space-evenly;
+}
+
+footer ul li {
+    margin: 0px 10px;
+}
+
+/* Page d'accueil */
+.bg-image {
+    min-height: 100%;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../images/tlouwallpaper.jpg');
+    background-size: cover;
+    opacity: 90%;
+}
+
+.bg-image h1 {
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    /* text-shadow: horizontal, vertical, flou(blur), couleur */
+    text-shadow: 0px 5px 5px #000000;
+    padding: 20px 0px;
+}
+
+.bg-image p {
+    color: white;
+    text-align: center;
+    text-shadow: 0px 5px 5px #000000;
+    font-size: 25px;
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+
+.bg-image .accueil {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 25px;
+}
+
+.bg-image .accueil p {
+    font-size: 20px;
+}
+
+.bg-image .accueil img {
+    width: 200px;
+}
+
+/* Page de Naughty Dog */
+.ng {
+    margin-top: 100px;
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+.story {
+    font-size: 20px;
+}
+
+.ng img {
+    width: 1000px;
 }

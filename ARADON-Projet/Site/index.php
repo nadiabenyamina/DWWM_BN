@@ -13,36 +13,105 @@ try {
             case "accueil":
                 require "views/accueil.view.php";
             break;
-            case "histoire":
-                if (empty($url[1])) {                    
-                } elseif ($url[1] === "h") {
-                    // vkhkhkvhkvbhj
-                } else {
+            case "naughtydog":
+                if (empty($url[1])) {
+                    require "views/naughtydog.view.php";
+                } 
+                // elseif ($url[1] === "h") {} 
+                else {
                     throw new Exception("La page n'existe pas");
                 }
             break;
             case "jeux":
-                if (empty($url[1])) {                    
-                } elseif ($url[1] === "j") {
-                } elseif ($url[1] === "a") {
-                } elseif ($url[1] === "m") {
-                } elseif ($url[1] === "s") {
-                } elseif ($url[1] === "av") {
-                } elseif ($url[1] === "mv") {
+                if (empty($url[1])) {
+                    require "views/jeux.view.php";
                 }
+                // elseif ($url[1] === "j") {
+                // } elseif ($url[1] === "a") {
+                // } elseif ($url[1] === "m") {
+                // } elseif ($url[1] === "s") {
+                // } elseif ($url[1] === "av") {
+                // } elseif ($url[1] === "mv") {
+                // }
                 else {
                     throw new Exception("La page n'existe pas");
                 }
             break;
             case "personnages":
-                if (empty($url[1])) {                    
-                } elseif ($url[1] === "p") {
-                } elseif ($url[1] === "a") {
-                } elseif ($url[1] === "m") {
-                } elseif ($url[1] === "s") {
-                } elseif ($url[1] === "av") {
-                } elseif ($url[1] === "mv") {
+                
+                if (empty($url[1])) {
+                    require "views/personnages.view.php";
                 }
+                //  elseif ($url[1] === "p") {
+                // } elseif ($url[1] === "a") {
+                // } elseif ($url[1] === "m") {
+                // } elseif ($url[1] === "s") {
+                // } elseif ($url[1] === "av") {
+                // } elseif ($url[1] === "mv") {
+                // }
+                else {
+                    throw new Exception("La page n'existe pas");
+                }
+            break;
+            case "bande dessinée":
+                
+                if (empty($url[1])) {
+                    require "views/bd.view.php";
+                }
+                //  elseif ($url[1] === "p") {
+                // } elseif ($url[1] === "a") {
+                // } elseif ($url[1] === "m") {
+                // } elseif ($url[1] === "s") {
+                // } elseif ($url[1] === "av") {
+                // } elseif ($url[1] === "mv") {
+                // }
+                else {
+                    throw new Exception("La page n'existe pas");
+                }
+            break;
+            case "serie":
+                
+                if (empty($url[1])) {
+                    require "views/serie.view.php";
+                }
+                // elseif ($url[1] === "p") {
+                // } elseif ($url[1] === "a") {
+                // } elseif ($url[1] === "m") {
+                // } elseif ($url[1] === "s") {
+                // } elseif ($url[1] === "av") {
+                // } elseif ($url[1] === "mv") {
+                // }
+                else {
+                    throw new Exception("La page n'existe pas");
+                }
+            break;
+            case "connexion":
+                
+                if (empty($url[1])) {
+                    require "views/connexion.view.php";
+                }
+                // elseif ($url[1] === "p") {
+                // } elseif ($url[1] === "a") {
+                // } elseif ($url[1] === "m") {
+                // } elseif ($url[1] === "s") {
+                // } elseif ($url[1] === "av") {
+                // } elseif ($url[1] === "mv") {
+                // }
+                else {
+                    throw new Exception("La page n'existe pas");
+                }
+            break;
+            case "inscription":
+                if (empty($url[1])) {
+                    require "views/inscription.view.php";
+                }
+                //  elseif ($url[1] === "p") {
+                // } elseif ($url[1] === "a") {
+                // } elseif ($url[1] === "m") {
+                // } elseif ($url[1] === "s") {
+                // } elseif ($url[1] === "av") {
+                // } elseif ($url[1] === "mv") {
+                // }
                 else {
                     throw new Exception("La page n'existe pas");
                 }
