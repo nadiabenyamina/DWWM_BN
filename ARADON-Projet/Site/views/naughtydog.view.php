@@ -1,6 +1,10 @@
 <?php ob_start() ?>
 
 <div class="ng">
+    <div class="ng-img">
+        <img src="images/ng-full.png" alt="">
+    </div>
+    
     <p class="story">
         Established in 1984, Naughty Dog is one of the most successful and prolific game development studios in the world and a flagship 
         first-party studio within PlayStation Studios. From creating the iconic Crash Bandicoot and Jak and Daxter series to modern franchises 
@@ -19,7 +23,7 @@
         Naughty Dog is a wholly-owned subsidiary of Sony Interactive Entertainment located in Santa Monica, California. 
         For more information, follow us on Twitter, Facebook, or Instagram.
     </p>
-    <img src="images/ng-full.png" alt="">
+    
 </div>
 
 <?php

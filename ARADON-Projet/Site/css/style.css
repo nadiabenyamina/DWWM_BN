@@ -7,22 +7,21 @@
 }
 
 /* hauteur minimum du html et du body de 100% */
-html, body {
+/* html, body {
     height: 100%;
-}
-
+} */
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #ECBB73;
     /* position relative sur le body pour pouvoir fixer le footer en bas de page */
-    position: relative;
+    /* position: relative; */
 }
 
 /* contenu des pages avec une hauteur minimum de 100% */
-.content {
+/* .content {
     min-height: 100%;
-}
+} */
 
 /* Barre de navigation */
 .navbar {
@@ -36,22 +35,29 @@ body {
 
 .navbar a {
     color: white;
+    margin: 0px 10px;
 }
 
-.navbar .nav-links ul {
+/* Couleur de fond au survol des boutons du menu */
+.navbar a:hover {
+    background-color: burlywood;
+    padding: 10px;
+}
+
+/* .navbar .nav-links ul {
     display: flex;
     margin: 0px 10px;
 }
 
 .navbar .nav-links ul li {
     margin: 0px 10px;
-}
+} */
 
 /* Footer */
 footer {
     /* position absolute pour fixer le footer en bas de page */
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
+    /* position: absolute; */
+    /* bottom: 0; left: 0; right: 0; */
     padding: 20px;
     width: 100vw;
     background-color: #3A3026;
@@ -75,12 +81,12 @@ footer ul li {
 
 /* Page d'accueil */
 .bg-image {
-    min-height: 100%;
+    /* min-height: 100%; */
     height: 100vh;
     width: 100vw;
     background-image: url('../images/tlouwallpaper.jpg');
     background-size: cover;
-    opacity: 90%;
+    opacity: 85%;
 }
 
 .bg-image h1 {
@@ -117,15 +123,33 @@ footer ul li {
 
 /* Page de Naughty Dog */
 .ng {
-    margin-top: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     margin-left: 300px;
     margin-right: 300px;
 }
 
 .story {
     font-size: 20px;
+    text-align: justify;
+    margin-top: 50px;
 }
 
 .ng img {
-    width: 1000px;
+    width: 50%;
+    display: block;
+    margin: auto;
+}
+
+/* titres et paragraphes des pages avec le même style */
+.title {
+    margin: 30px 0px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.para {
+    margin: 0px 400px;
+    margin-bottom: 50px;
+    text-align: justify;
 }

@@ -7,41 +7,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>The Last Of Us</title>
-
 </head>
 
 <body>
     <!-- Barre de navigation -->
     <nav class="navbar">
         <div class="nav-links">
-            <ul class="barre">
-                <li><a href="<?=URL?>accueil">Accueil</a></li>
-                <li><a href="<?=URL?>naughtydog">Naughty Dog</a></li>
-                <li><a href="<?=URL?>jeux">Jeux</a></li>
-                <li><a href="<?=URL?>personnages">Personnages</a></li>
-                <li><a href="<?=URL?>bd">Bande Dessinée</a></li>
-                <li><a href="<?=URL?>serie">Série</a></li>
-            </ul>
+            <a href="<?= URL ?>accueil">Accueil</a>
+            <a href="<?= URL ?>naughtydog">Naughty Dog</a>
+            <a href="<?= URL ?>jeux">Jeux</a>
+            <a href="<?= URL ?>personnages">Personnages</a>
+            <a href="<?= URL ?>bd">Bande Dessinée</a>
+            <a href="<?= URL ?>serie">Série</a>
         </div>
+
         <div>
-            <button><a href="<?=URL?>connexion">Connexion</a> </button>
-            <button><a href="<?=URL?>inscription">Inscription</a></button>
+            <a href="<?= URL ?>connexion">Connexion</a>
+            <a href="<?= URL ?>inscription">Inscription</a>
         </div>
     </nav>
-    <!-- Fin barre navigation -->
 
+    <!-- Contenu du dossier view -->
     <div class="content">
         <?= $content ?>
     </div>
-    
+
+    <!-- Footer du site -->
     <footer>
-        <p>Copyright © 2023 - Tous droits réservés</p>
         <div>
             <a href=""></a>
         </div>
+
+        <p>Copyright © 2023 - Tous droits réservés</p>
+
         <ul>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Mentions légales</a></li>
+            <li><a href="<?= URL ?>contact">Contact</a></li>
+            <li><a href="<?= URL ?>mentionslegales">Mentions légales</a></li>
         </ul>
     </footer>
 </body>

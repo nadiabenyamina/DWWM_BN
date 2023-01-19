@@ -13,15 +13,16 @@ try {
             case "accueil":
                 require "views/accueil.view.php";
             break;
+
             case "naughtydog":
                 if (empty($url[1])) {
                     require "views/naughtydog.view.php";
-                } 
-                // elseif ($url[1] === "h") {} 
+                }
                 else {
                     throw new Exception("La page n'existe pas");
                 }
             break;
+
             case "jeux":
                 if (empty($url[1])) {
                     require "views/jeux.view.php";
@@ -37,8 +38,8 @@ try {
                     throw new Exception("La page n'existe pas");
                 }
             break;
+
             case "personnages":
-                
                 if (empty($url[1])) {
                     require "views/personnages.view.php";
                 }
@@ -53,73 +54,80 @@ try {
                     throw new Exception("La page n'existe pas");
                 }
             break;
-            case "bande dessinée":
-                
+
+            case "bd":
                 if (empty($url[1])) {
                     require "views/bd.view.php";
                 }
-                //  elseif ($url[1] === "p") {
-                // } elseif ($url[1] === "a") {
-                // } elseif ($url[1] === "m") {
-                // } elseif ($url[1] === "s") {
-                // } elseif ($url[1] === "av") {
-                // } elseif ($url[1] === "mv") {
-                // }
                 else {
                     throw new Exception("La page n'existe pas");
                 }
             break;
+
             case "serie":
-                
                 if (empty($url[1])) {
                     require "views/serie.view.php";
                 }
-                // elseif ($url[1] === "p") {
-                // } elseif ($url[1] === "a") {
-                // } elseif ($url[1] === "m") {
-                // } elseif ($url[1] === "s") {
-                // } elseif ($url[1] === "av") {
-                // } elseif ($url[1] === "mv") {
-                // }
                 else {
                     throw new Exception("La page n'existe pas");
                 }
             break;
+
             case "connexion":
-                
                 if (empty($url[1])) {
                     require "views/connexion.view.php";
                 }
-                // elseif ($url[1] === "p") {
-                // } elseif ($url[1] === "a") {
-                // } elseif ($url[1] === "m") {
-                // } elseif ($url[1] === "s") {
-                // } elseif ($url[1] === "av") {
-                // } elseif ($url[1] === "mv") {
-                // }
                 else {
                     throw new Exception("La page n'existe pas");
                 }
             break;
+
             case "inscription":
                 if (empty($url[1])) {
                     require "views/inscription.view.php";
                 }
-                //  elseif ($url[1] === "p") {
-                // } elseif ($url[1] === "a") {
-                // } elseif ($url[1] === "m") {
-                // } elseif ($url[1] === "s") {
-                // } elseif ($url[1] === "av") {
-                // } elseif ($url[1] === "mv") {
-                // }
                 else {
                     throw new Exception("La page n'existe pas");
                 }
             break;
+
+            case "contact":
+                if (empty($url[1])) {
+                    require "views/contact.view.php";
+                } else {
+                    throw new Exception("La page n'existe pas.");
+                }
+            break;
+
+            case "mentionslegales":
+                if (empty($url[1])) {
+                    require "views/mentions.view.php";
+                } else {
+                    throw new Exception("La page n'existe pas.");
+                }
+            break;
+
+            case "tlou1":
+                if (empty($url[1])) {
+                    require "views/tlou1.view.php";
+                } else {
+                    throw new Exception("La page n'existe pas.");
+                }
+            break;
+
+            case "tlou2":
+                if (empty($url[1])) {
+                    require "views/tlou2.view.php";
+                } else {
+                    throw new Exception("La page n'existe pas.");
+                }
+            break;
+
             default : throw new Exception("La page n'existe pas");
         }
     }
 }
+
 catch (Exception $e) {
     echo $e->getMessage();
 }
