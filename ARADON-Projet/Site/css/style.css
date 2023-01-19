@@ -153,3 +153,50 @@ footer ul li {
     margin-bottom: 50px;
     text-align: justify;
 }
+
+/* Page contact */
+.form-contact span {
+    color: red;
+}
+
+.form-contact {
+    display: flex;
+    justify-content: center;
+    margin: 50px 680px;
+    padding: 30px;
+    font-size: 20px;
+    background-color: white;
+    border-radius: 30px;
+}
+
+.rep {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.accepte {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.autorise {
+    font-size: 10px;
+    padding: 0px 10px;
+    text-align: justify;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
+}
+
+.soumettre {
+    font-size: 10px;
+    padding: 0px 10px;
+    margin: 0px 30px;
+    text-align: justify;
+    font-style: italic;
+}
