@@ -1,5 +1,6 @@
 <?php
 
+// permet d'accéder à la bdd
 abstract class Model
 {
     private static $pdo;

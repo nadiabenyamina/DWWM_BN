@@ -1,6 +1,6 @@
 <?php ob_start() ?>
 
-<h1>THE LAST OF US PART II</h1>
+<h1 class="title">THE LAST OF US PART II</h1>
 
 <!-- à relier à la bdd -->
 

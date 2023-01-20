@@ -23,6 +23,8 @@ body {
     min-height: 100%;
 } */
 
+
+
 /* Barre de navigation */
 .navbar {
     padding: 20px;
@@ -53,6 +55,8 @@ body {
     margin: 0px 10px;
 } */
 
+
+
 /* Footer */
 footer {
     /* position absolute pour fixer le footer en bas de page */
@@ -78,6 +82,8 @@ footer ul {
 footer ul li {
     margin: 0px 10px;
 }
+
+
 
 /* Page d'accueil */
 .bg-image {
@@ -121,6 +127,8 @@ footer ul li {
     width: 200px;
 }
 
+
+
 /* Page de Naughty Dog */
 .ng {
     margin-top: 50px;
@@ -141,6 +149,8 @@ footer ul li {
     margin: auto;
 }
 
+
+
 /* titres et paragraphes des pages avec le même style */
 .title {
     margin: 30px 0px;
@@ -154,11 +164,101 @@ footer ul li {
     text-align: justify;
 }
 
-/* Page contact */
-.form-contact span {
-    color: red;
+
+
+/* Page jeux */
+
+
+
+
+/* Page personnages */
+
+
+
+
+/* Page bande desinnée */
+
+
+
+
+/* Page série */
+
+
+
+
+/* Page connexion */
+.form-connexion {
+    display: flex;
+    justify-content: center;
+    margin: 50px 700px;
+    padding: 30px 0px;
+    font-size: 20px;
+    background-color: white;
+    border-radius: 30px;
 }
 
+.form-connexion .rep {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.form-connexion label {
+    padding-right: 10px;
+}
+
+.form-connexion .btn {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
+}
+
+.form-connexion .btn input {
+    background-color: #ECBB73;
+    padding: 10px;
+    font-weight: bold;
+    border-color: lightgray;
+}
+
+
+
+/* Page inscription */
+.form-inscription {
+    display: flex;
+    justify-content: center;
+    margin: 50px 600px;
+    padding: 30px 0px;
+    font-size: 20px;
+    background-color: white;
+    border-radius: 30px;
+}
+
+.form-inscription .rep {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+.form-inscription label {
+    padding-right: 15px;
+}
+
+.form-inscription .btn {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
+}
+
+.form-inscription .btn input {
+    background-color: #ECBB73;
+    padding: 10px;
+    font-weight: bold;
+    border-color: lightgray;
+}
+
+
+
+/* Page contact */
 .form-contact {
     display: flex;
     justify-content: center;
@@ -169,32 +269,48 @@ footer ul li {
     border-radius: 30px;
 }
 
-.rep {
+.form-contact span {
+    color: red;
+}
+
+/* Div des réponses fournies par l'utilisateur */
+.form-contact .rep {
     display: flex;
     justify-content: space-between;
     padding: 20px;
 }
 
+/* Div de la checkbox */
 .accepte {
     display: flex;
     justify-content: center;
     margin-top: 10px;
 }
 
+/* Label de la checkbox */
 .autorise {
-    font-size: 10px;
+    font-size: 11px;
     padding: 0px 10px;
     text-align: justify;
 }
 
-.btn {
+/* Bouton envoyer */
+.form-contact .btn {
     display: flex;
     justify-content: center;
     margin: 20px 0px;
 }
 
+.form-contact .btn input {
+    background-color: #ECBB73;
+    padding: 10px;
+    font-weight: bold;
+    border-color: lightgray;
+}
+
+/* Dernier paragraphe du formulaire */
 .soumettre {
-    font-size: 10px;
+    font-size: 11px;
     padding: 0px 10px;
     margin: 0px 30px;
     text-align: justify;
