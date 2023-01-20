@@ -79,7 +79,7 @@ class LivreManager extends Model
 
     public function modificationLivreBd($id, $titre, $nbPages, $image)
     {
-        // SQL n'est pas sensible à la casse, on peut écrire UPDATE en minuscule, la requête fonctionnera toujours
+        // SQL n'est pas sensible à la casse, on peut écrire UPDATE en minuscule ou majuscule, la requête fonctionnera toujours
         $req = "
         update livres
         set titre = :titre, nbPages = : nbPages, image = :image

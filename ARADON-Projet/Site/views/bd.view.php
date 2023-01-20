@@ -10,8 +10,8 @@
         <th>Auteur</th>
         <th>Dessinateur</th>
         <th>Genre</th>
-        <th>Pays</th>
         <th>Éditeur</th>
+        <th>Pays</th>
         <th>Date de sortie</th>
         <th>Prix de vente</th>
         <th>Nombre de pages</th>
@@ -31,8 +31,8 @@
         <td class="align-middle"><?= $bd[$i]->getAuteur()?></td>
         <td class="align-middle"><?= $bd[$i]->getDessinateur()?></td>
         <td class="align-middle"><?= $bd[$i]->getGenre()?></td>
-        <td class="align-middle"><?= $bd[$i]->getPays()?></td>
         <td class="align-middle"><?= $bd[$i]->getEditeur()?></td>
+        <td class="align-middle"><?= $bd[$i]->getPays()?></td>
         <td class="align-middle"><?= $bd[$i]->getDateSortie()?></td>
         <td class="align-middle"><?= $bd[$i]->getPrixVente()?></td>
         <td class="align-middle"><?= $bd[$i]->getNbPages()?></td>
