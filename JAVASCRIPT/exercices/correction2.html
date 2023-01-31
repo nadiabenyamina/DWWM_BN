@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <label for="">Saisir la factorielle voulue : </label>
+        <input type="number" id="factorielle">
+        <button class="btn">Valider</button>
+        <div id="resultat"></div>
+    </div>
+
+    <script>
+        const inputFactorielle = document.querySelector('#factorielle')
+        const btn = document.querySelector('.btn');
+        const divResult = document.querySelector('#resultat');
+
+        btn.addEventListener('click', function () {
+            let nombre = inputFactorielle.value;
+            let fact = 1;
+            for (let i = 1; i <= nombre; i++) {
+                fact = fact * i;
+            }
+            divResult.innerHTML = "La factorielle de " + nombre + " = " + fact;
+        });
+    </script>
+</body>
+
+</html>

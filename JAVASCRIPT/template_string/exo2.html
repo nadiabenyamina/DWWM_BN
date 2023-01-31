@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style> .chbx {display: flex;} </style>
+</head>
+<body>
+    <div class="container">
+        <label for="">Saisir le rayon : </label>
+        <input type="number" id="number">
+        <div id="resultat"></div>
+    </div>
+
+    <div class="chbx">
+        <p>Périmètre : </p><input type="checkbox" id="check">
+    </div>
+    
+    <script>
+        const inputFactorielle = document.querySelector('#number')
+        const check = document.querySelector('#check');
+        const divResult = document.querySelector('#resultat');
+
+        check.addEventListener('click', function () {
+            if (check.checked == true) {
+                divResult.innerHTML = "Périmètre : " + 2 * inputFactorielle.value * Math.PI;
+                divResult.style.color = 'blue';
+            } else {
+                divResult.innerHTML = "Aire : " + Math.PI * inputFactorielle.value * inputFactorielle.value;
+                divResult.style.color = 'red';
+            }
+        });
+    </script>
+</body>
+</html>

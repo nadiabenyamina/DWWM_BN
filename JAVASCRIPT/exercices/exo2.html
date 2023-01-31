@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form onsubmit="return fact()">
+        <p>Saisir la factorielle voulue : </p>
+        <input type="text" id="nbr"></input>
+        <input type="submit"></input>
+        <div id="msg"></div>
+    </form>
+
+    <script>
+        function fact() {
+            // 'a' définit l'input avec l'id 'nbr'
+            // document.getElementById('') récupère l'input
+            // value = récupère la valeur
+            a = document.getElementById('nbr').value;
+            // on donne une valeur à f
+            f = 1;
+            // si le document est vide, s'il n'y a aucune valeur d'entrer, on affiche le message suivent grâce au innerHTML
+            if (a == '') {
+                document.getElementById('msg').innerHTML = "Entrez un nombre valide"
+                // 
+                return false;
+            } else {
+                // ici la fonction pour calculer la factorielle
+                var i, nbr, f = 1;
+                for (i = 1; i <= a; i++) {
+                    f = f * i;
+                }
+                // on affiche le résultat dans la div comportant l'id 'msg'
+                document.getElementById('msg').innerHTML = "Résultat : " + f
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>
