@@ -20,15 +20,15 @@
     </div>
     
     <script>
-        const inputFactorielle = document.querySelector('#number')
+        const inputNumber = document.querySelector('#number')
         const check = document.querySelector('#check');
         const divResult = document.querySelector('#resultat');
 
         check.addEventListener('click', function () {
             if (check.checked == true) {
-                divResult.innerHTML = "Périmètre : " + 2 * inputFactorielle.value * Math.PI;
+                divResult.innerHTML = "Périmètre : " + 2 * inputNumber.value * Math.PI;
             } else {
-                divResult.innerHTML = "Aire : " + Math.PI * inputFactorielle.value * inputFactorielle.value;
+                divResult.innerHTML = "Aire : " + Math.PI * inputNumber.value * inputNumber.value;
             }
         });
     </script>

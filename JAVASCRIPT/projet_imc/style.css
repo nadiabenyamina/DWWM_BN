@@ -1,0 +1,13 @@
+body {
+    background-image: url(img/sfmp.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+}
+
+#globale {
+    background-color: rgb(79, 229, 255);
+    margin-top: 100px;
+    padding: 50px;
+}
