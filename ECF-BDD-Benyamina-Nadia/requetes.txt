@@ -61,4 +61,14 @@ WHERE avoir_note.idEtudiant = 17
 
 ----------------------------------------------------------------------
 
-9) UPDATE avoir_note
+9) INSERT INTO avoir_note (idAvoirNote, idEtudiant, idEpreuve, note)
+VALUES (NULL, 18, 4, NULL);
+
+SELECT AVG(note)*0.9
+FROM avoir_note
+WHERE avoir_note.idEpreuve = 4;
+
+UPDATE avoir_note
+SET note = 9.8000
+WHERE avoir_note.idEtudiant = 18
+AND avoir_note.idEpreuve = 4
