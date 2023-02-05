@@ -38,9 +38,7 @@ function calculIMC() {
 
 btn.addEventListener('click', function () {
     // isNaN() : fonction qui permet de dire si la valeur entrée est un nombre ou pas (NaN : Not a Number)
-    if ((size.value == '' && weight.value == '') || 
-    (size.value == '' || weight.value == '') ||
-    (isNaN(size.value) || isNaN(weight.value))) {
+    if ((size.value == '' && weight.value == '') || (size.value == '' || weight.value == '')) {
         divResult.innerHTML = "Oops";
         divTxt.innerHTML = "Veuillez remplir les champs ci-dessus correctement.";
     } else if (size.value && weight.value){

@@ -4,10 +4,12 @@ body {
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
+    /* align items center et height 100vh permettent de centrer le contenu au centre de la page */
+    align-items: center;
+    height: 100vh;
 }
 
 #globale {
     background-color: rgb(79, 229, 255);
-    margin-top: 100px;
     padding: 50px;
 }

@@ -1,0 +1,64 @@
+1) SELECT nomEtudiant, prenomEtudiant, dateNaissanceEtudiant
+FROM etudiants
+WHERE dateNaissanceEtudiant < '1994-05-19'
+
+----------------------------------------------------------------------
+
+2) SELECT et.nomEtudiant, et.prenomEtudiant, an.note
+FROM etudiants et
+INNER JOIN avoir_note an ON et.idEtudiant = an.idEtudiant
+WHERE an.idEpreuve = 4
+AND an.note > 10
+
+----------------------------------------------------------------------
+
+3) SELECT et.nomEtudiant, et.prenomEtudiant, an.note
+FROM avoir_note an
+INNER JOIN etudiants et ON et.idEtudiant = an.idEtudiant
+WHERE an.note >= 12
+
+----------------------------------------------------------------------
+
+4) SELECT et.nomEtudiant, et.prenomEtudiant, an.note
+FROM etudiants et
+INNER JOIN avoir_note an ON an.idEtudiant = et.idEtudiant
+WHERE an.idEpreuve = 4
+AND an.note > (SELECT avoir_note.note
+               FROM etudiants
+               INNER JOIN avoir_note ON avoir_note.idEtudiant = etudiants.idEtudiant
+               WHERE etudiants.prenomEtudiant = 'Luc' AND etudiants.nomEtudiant = 'Dupont'
+               AND avoir_note.idEpreuve = 4)
+
+----------------------------------------------------------------------
+
+5) SELECT et.nomEtudiant, et.prenomEtudiant, an.note
+FROM etudiants et
+INNER JOIN avoir_note an ON an.idEtudiant = et.idEtudiant
+WHERE an.note IN (SELECT a.note
+               FROM avoir_note a 
+               INNER JOIN etudiants e ON a.idEtudiant = e.idEtudiant
+               WHERE e.prenomEtudiant = 'Luc' AND e.nomEtudiant = 'Dupont')
+
+----------------------------------------------------------------------
+
+6) ALTER TABLE etudiants
+ADD HOBBY VARCHAR(20)
+DEFAULT 'Sport'
+
+----------------------------------------------------------------------
+
+7.a) ALTER TABLE etudiants
+ADD NewCol INT(11)
+
+7.b) ALTER TABLE etudiants
+DROP NewCol
+
+----------------------------------------------------------------------
+
+8) UPDATE avoir_note
+SET note = (note - 3)
+WHERE avoir_note.idEtudiant = 17
+
+----------------------------------------------------------------------
+
+9) UPDATE avoir_note
