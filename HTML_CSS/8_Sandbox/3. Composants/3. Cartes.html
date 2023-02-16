@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Sandbox</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body class="bg-light text-dark">
+    <a href="../home.html" class="btn btn-primary text-light bg-dark btn-outline-dark">< Retour au Menu</a >
+
+    <h1 class="text-center mt-5 display-3">Composants</h1>
+    <h2 class="text-center mb-5 display-5">Les Cartes</h2>
+
+    <div class="container mb-4">
+      <ul class="nav nav-pills justify-content-center row gy-3 gx-3">
+          <li class="nav-item col-12 col-sm-6 col-lg-3 col-xl-2 text-center ">
+              <a class="p-2 d-block h-100 d-flex align-items-center justify-content-center  btn btn-outline-primary"
+                  href="./1. Images-Tableaux.html">Images / Tableaux</a>
+          </li>
+          <li class="nav-item col-12 col-sm-6 col-lg-3 col-xl-2 text-center">
+              <a class="p-2 d-block h-100 d-flex align-items-center justify-content-center     btn btn-outline-primary"
+                  href="./2. Boutons.html">Boutons</a>
+          </li>
+          <li class="nav-item col-12 col-sm-6 col-lg-3 col-xl-2 text-center">
+              <a class="p-2 d-block h-100 d-flex align-items-center justify-content-center  text-light  btn btn-primary"
+                  href="./3. Cartes.html">Cartes</a>
+          </li>
+          <li class="nav-item col-12 col-sm-6 col-lg-3 col-xl-2 text-center">
+              <a class="p-2 d-block h-100 d-flex align-items-center justify-content-center    btn btn-outline-primary"
+                  href="./4. Breadcrumb-Nav.html">Breadcrumb-Nav</a>
+          </li>
+          <li class="nav-item col-12 col-sm-6 col-lg-3 col-xl-2 text-center">
+              <a class="p-2 d-block h-100 d-flex align-items-center justify-content-center    btn btn-outline-primary"
+                  href="./5. Listes.html">Listes</a>
+          </li>
+          <li class="nav-item col-12 col-sm-6 col-lg-3 col-xl-2 text-center">
+              <a class="p-2 d-block h-100 d-flex align-items-center justify-content-center    btn btn-outline-primary"
+                  href="./6. Progress-Spinners.html">Progress-Spinners</a>
+          </li>
+
+      </ul>
+  </div>
+    <hr>
+    <!-- Début de la Leçon -->
+    <div class="container p-5 mb-5">
+
+        <h2 class="display-6 mb-3">Une carte complète de base</h2>
+        
+        <!-- Une carte est un composant d'interface servant à montrer du contenu, qu'on réplique parfois (affichage d'articles, de profils multiples, etc ...) -->
+        <!-- Avec Bootstrap, elles sont composées de multiples classes, certaines n'apportant que peu de style. -->
+        
+        <!-- [card] sur le parent -->
+        <!-- [card-img-top] sur une image dans une carte -->
+        <!-- [card-body] sur le container du contenu -->
+        <!-- [card-title|text] sur les éléments du contenu -->
+        <!-- Notez la largeur en pixel, qui garde la même UI en permanence, mais qui empêche toute fluidité. -->
+
+        <div class="card" style="width: 18rem;">
+            <!-- Respectez le format lors du choix des images (portrait / paysage) -->
+            <img src="https://images.unsplash.com/photo-1638631221632-c18b0a8a40ee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="card-img-top">
+            <div class="container">
+              <h5 class="card-title">Escapade</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Reserver</a>
+            </div>
+          </div>
+
+
+        <h2 class="display-6 mb-3 mt-5">Une carte sans image, très simple</h2>
+
+        <!-- [card] sur le parent -->
+        <!-- [card-body] sur le contenu -->
+
+
+        <div class="card">
+          <p class="card-body mb-0">
+            Lorem ipsum dolor sit amet.
+          </p>
+        </div>
+
+
+
+        <h2 class="display-6 mb-3 mt-5">Une carte simple avec des liens</h2>
+
+        <!-- [card-link] sur les liens -->
+        <!-- Card-link apporte seulement de la marge sur le seconde lien. -->
+
+        <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Lorem, ipsum dolor.</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Lorem, ipsum.</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="card-link">En savoir plus</a>
+              <a href="#" class="card-link">Acheter</a>
+            </div>
+          </div>
+
+
+          <h2 class="display-6 mb-3 mt-5">Une grille de cartes</h2>
+
+          <!-- On peut facilement créer une grille et y placer des cartes -->
+          <!-- Le tout est donc responsive car on n'utilise pas de largeur en "dur" -->
+
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a short card.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <h2 class="display-6 mb-3 mt-5">Des cartes colorées</h2>
+
+          <!-- [card-header] stylise un header -->
+          <!-- [bg-X] pour les colorer -->
+          
+          <div class="row">
+            <div class="card text-white bg-primary ms-3 mb-3" style="max-width: 18rem;">
+                <div class="card-header bg-success">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Primary card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+
+            <div class="card text-white bg-dark ms-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Secondary card title</h5>
+                    <p class="card-text bg-danger">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+            </div>
+        </div>
+            
+    </div>
+</body>
+</html>

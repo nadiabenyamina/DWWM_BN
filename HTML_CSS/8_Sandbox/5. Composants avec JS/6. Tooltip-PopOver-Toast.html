@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Sandbox</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body class="bg-light text-dark">
+  <a href="../home.html" class="btn btn-primary text-light bg-dark btn-outline-dark">< Retour au Menu</a >
+
+  <h1 class="text-center mt-5 display-3">Composants</h1>
+  <h2 class="text-center mb-5 display-5">Tooltip/PopOver/Toast</h2>
+
+  <div class="container mb-4">
+    <ul class="nav nav-pills justify-content-center row gy-3 gx-3">
+        <li class="nav-item col-12 col-sm-6 col-lg-3 col-xl-2 text-center ">
+            <a class="p-2 d-block h-100 d-flex align-items-center justify-content-center   btn btn-outline-primary" href="./1. Carousel.html">Carousel</a>
+        </li>
+        <li class="nav-item col-12 col-sm-6 col-lg-3 col-xl-2 text-center">
+            <a class="p-2 d-block h-100 d-flex align-items-center justify-content-center    btn btn-outline-primary" href="./2. Dropdown-Accordeon.html">Dropdown / Accordeon</a>
+        </li>
+        <li class="nav-item col-12 col-sm-6 col-lg-3 col-xl-2 text-center">
+            <a class="p-2 d-block h-100 d-flex align-items-center justify-content-center    btn btn-outline-primary"
+                href="./3. Modale-Alerte.html">Modale / Alerte</a>
+        </li>
+        <li class="nav-item col-12 col-sm-6 col-lg-3 col-xl-2 text-center">
+            <a class="p-2 d-block h-100 d-flex align-items-center justify-content-center     btn btn-outline-primary"
+                href="./4. Navbar.html">Navbar</a>
+        </li>
+        <li class="nav-item col-12 col-sm-6 col-lg-3 col-xl-2 text-center">
+            <a class="p-2 d-block h-100 d-flex align-items-center justify-content-center   btn btn-outline-primary"
+                href="./5. Menu-rideau.html">Menu-Rideau</a>
+        </li>
+        <li class="nav-item col-12 col-sm-6 col-lg-3 col-xl-2 text-center">
+            <a class="p-2 d-block h-100 d-flex align-items-center justify-content-center  text-light btn btn-primary"
+                href="./6. Tooltip-PopOver-Toast.html">Tooltip-PopOver-Toast</a>
+        </li>
+    </ul>
+  </div>
+<hr>
+<!-- Début de la Leçon -->
+<div class="container p-5 mb-5">
+
+    <h2 class="display-6 mb-3">Créer des tooltips </h2>
+
+    <!-- Un tooltip est un texte qui apparaît en général lors du survol d'un élément  -->
+    <!-- On doit les initialiser en JS -->
+    <!-- On peut choisir la position du tooltip avec data-bs. -->
+
+    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
+      Tooltip on top
+    </button>
+    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on right">
+      Tooltip on right
+    </button>
+    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom">
+      Tooltip on bottom
+    </button>
+    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left">
+      Tooltip on left
+    </button>
+  
+
+    <h2 class="display-6 mb-3 mt-5">Créer des popOver</h2>
+
+    <!-- Le popover suit le même principe, mais au clic ! -->
+    <!-- On doit les initialiser en JS -->
+
+    <button type="button" class="btn btn-lg btn-danger example-popover" data-bs-toggle="popover" title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+
+
+    <h2 class="display-6 mb-3 mt-5">Faire pop des toasts</h2>
+
+    <!-- Un toast est un message qui apparaît en général en bas à droite de l'écran, comme un message de confirmation. -->
+    <!-- On doit les initialiser en JS -->
+
+    <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+      <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-body bg-success">
+          <p class="fs-5 mb-0 text-light">Lorem ipsum dolor sit amet.</p>
+        </div>
+      </div>
+    </div>
+
+</div>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+      // tooltip
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+      })
+
+      // popover
+      var popover = new bootstrap.Popover(document.querySelector('.example-popover'), {
+        container: 'body'
+      })
+
+      // toast
+      var toastTrigger = document.getElementById('liveToastBtn')
+      var toastLiveExample = document.getElementById('liveToast')
+      if (toastTrigger) {
+        toastTrigger.addEventListener('click', function () {
+          var toast = new bootstrap.Toast(toastLiveExample)
+
+          toast.show()
+        })
+      }
+    </script>
+</body>
+</html>

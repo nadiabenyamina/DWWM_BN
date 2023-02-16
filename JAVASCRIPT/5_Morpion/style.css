@@ -1,0 +1,84 @@
+* {
+    box-sizing: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #948E99;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2E1437, #948E99);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2E1437, #948E99);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.jeu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 30px 20px white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.jeu button {
+    height: 120px;
+    width: 120px;
+    margin: 20px;
+    background-color: white;
+    border: 3px solid black;
+    box-shadow: 0 0 10px 5px white;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+#gameEnd {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: #000000;
+    background: -webkit-linear-gradient(120deg, #0f9b0f, #000000);
+    background: linear-gradient(300deg, #0f9b0f, #000000);
+
+}
+
+#gameEnd p , #gameEnd input {
+    position: fixed;
+    top: 45%; left: 50%;
+    transform: translate(-45%, -45%);
+    text-align: center;
+}
+
+#gameEnd p {
+    margin-top: 80px;
+    color: white;
+    font-size: 50px;
+    
+}
+
+#reloadGame {
+    border-radius: 10px;
+    color: black;
+    border-style: inset;
+    font-size: 30px;
+    height: 60px;
+    width: 250px;
+    font-weight: bold;
+    background: white;
+}
+
+#reloadGame:hover {
+    color: white;
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(130deg, #0f9b0f, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(130deg, #0f9b0f, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }

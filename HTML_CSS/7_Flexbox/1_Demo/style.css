@@ -1,0 +1,17 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    background-color: #ccc;
+    padding: 10px;
+
+}
+.item{
+    background-color: #ec4c4c;
+    padding: 40px;
+    margin: 30px;
+    font-size: 40px;
+    color: #fff;
+}

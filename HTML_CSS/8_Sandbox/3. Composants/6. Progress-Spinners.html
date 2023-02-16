@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Sandbox</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body class="bg-light text-dark">
+    <a href="../home.html" class="btn btn-primary text-light bg-dark btn-outline-dark">< Retour au Menu</a >
+
+    <h1 class="text-center mt-5 display-3">Composants</h1>
+    <h2 class="text-center mb-5 display-5">Spinner / Proggress</h2>
+
+    <div class="container mb-4">
+        <ul class="nav nav-pills justify-content-center row gy-3 gx-3">
+            <li class="nav-item col-12 col-sm-6 col-lg-3 col-xl-2 text-center ">
+                <a class="p-2 d-block h-100 d-flex align-items-center justify-content-center  btn btn-outline-primary"
+                    href="./1. Images-Tableaux.html">Images / Tableaux</a>
+            </li>
+            <li class="nav-item col-12 col-sm-6 col-lg-3 col-xl-2 text-center">
+                <a class="p-2 d-block h-100 d-flex align-items-center justify-content-center     btn btn-outline-primary"
+                    href="./2. Boutons.html">Boutons</a>
+            </li>
+            <li class="nav-item col-12 col-sm-6 col-lg-3 col-xl-2 text-center">
+                <a class="p-2 d-block h-100 d-flex align-items-center justify-content-center    btn btn-outline-primary"
+                    href="./3. Cartes.html">Cartes</a>
+            </li>
+            <li class="nav-item col-12 col-sm-6 col-lg-3 col-xl-2 text-center">
+                <a class="p-2 d-block h-100 d-flex align-items-center justify-content-center    btn btn-outline-primary"
+                    href="./4. Breadcrumb-Nav.html">Breadcrumb-Nav</a>
+            </li>
+            <li class="nav-item col-12 col-sm-6 col-lg-3 col-xl-2 text-center">
+                <a class="p-2 d-block h-100 d-flex align-items-center justify-content-center    btn btn-outline-primary"
+                    href="./5. Listes.html">Listes</a>
+            </li>
+            <li class="nav-item col-12 col-sm-6 col-lg-3 col-xl-2 text-center">
+                <a class="p-2 d-block h-100 d-flex align-items-center justify-content-center text-light btn btn-primary"
+                    href="./6. Progress-Spinners.html">Progress-Spinners</a>
+            </li>
+  
+        </ul>
+      </div>
+    <hr>
+    <!-- Début de la Leçon -->
+    <div class="container p-5 mb-5">
+
+        <h2 class="display-6 mb-3">Créer un spinner </h2>
+
+        <!-- [spinner-border] sur le parent -->
+        <!-- [text-primary|secondary|danger|info|...] -->
+        <!-- [spinner-grow] pour un autre style -->
+
+        <div class="spinner-border" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        
+        <div class="text-info spinner-grow" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+
+        <div class="spinner-border text-danger" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+
+        <h2 class="display-6 mb-3 mt-5">Créer des boutons spinner </h2>
+
+        <!-- un bouton normal avec un spinner à l'intérieur -->
+        <!-- [spinner-border-sm] sur le span pour en faire un petit -->
+        <!-- Ici la classe [spinner-border] est directement ajoutée sur le span vu qu'on l'utilise dans un bouton. -->
+
+        <button class="btn btn-primary" type="button" disabled>
+          <span class="spinner-border" role="status" aria-hidden="true"></span>
+          <span class="visually-hidden">Loading...</span>
+        </button>
+
+        <button class="btn btn-primary" type="button" disabled>
+          <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+          Loading...
+        </button>
+
+
+        <h2 class="display-6 mb-3 mt-5">Créer des barres de progressions</h2>
+
+        <!-- [progress] sur le parent -->
+        <!-- [progress-bar] sur l'enfant -->
+        <!-- Les attributs aria/role servent à l'accessiblité -->
+        <!-- La width en style définit la largeur -->
+        <!-- [progress-bar-striped] sur l'enfant pour lui appliquer un style zébré -->
+        <!-- [progress-bar-animated] pour la rendre animée -->
+
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 20%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+            
+        <div class="progress mt-3">
+            <div class="progress-bar progress-bar-striped" style="width: 98%;" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+
+        <div class="progress mt-3">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 41%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+    
+    </div>
+</body>
+</html>
