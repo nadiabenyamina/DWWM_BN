@@ -1,0 +1,65 @@
+# script créé le : Mon Jan 23 22:15:38 CET 2023 -   syntaxe MySQL ;
+
+# use  VOTRE_BASE_DE_DONNEE ;
+
+DROP TABLE IF EXISTS Bd ;
+CREATE TABLE Bd (idBd int AUTO_INCREMENT NOT NULL,
+titre VARCHAR(250),
+auteur VARCHAR(250),
+dessinateur VARCHAR(250),
+genre VARCHAR(250),
+pays VARCHAR(250),
+editeur VARCHAR(250),
+dateSortie DATE,
+prixVente NUMERIC,
+nbPages INT,
+resume VARCHAR(250),
+PRIMARY KEY (idBd) ) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS Jeux ;
+CREATE TABLE Jeux (idJeux int AUTO_INCREMENT NOT NULL,
+titreJeux VARCHAR(250),
+dateSortieJeux DATE,
+resumeJeux VARCHAR(2000),
+PRIMARY KEY (idJeux) ) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS Personnages ;
+CREATE TABLE Personnages (idPersonnages int AUTO_INCREMENT NOT NULL,
+nom VARCHAR(250),
+histoire VARCHAR(2000),
+apparition VARCHAR(250),
+PRIMARY KEY (idPersonnages) ) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS Serie ;
+CREATE TABLE Serie (idSerie int AUTO_INCREMENT NOT NULL,
+titreSerie VARCHAR(250),
+auteurSerie VARCHAR(250),
+scenario VARCHAR,
+genreSerie VARCHAR(250),
+paysSerie VARCHAR(250),
+editeurSerie VARCHAR(250),
+dateSortieSerie DATE,
+nbSaisons INT,
+nbEpisodes INT,
+resumeSerie VARCHAR(2000),
+idJeux INT,
+PRIMARY KEY (idSerie) ) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS appartenir ;
+CREATE TABLE appartenir (idJeux int AUTO_INCREMENT NOT NULL,
+idPersonnages INT NOT NULL,
+PRIMARY KEY (idJeux,
+ idPersonnages) ) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS rattacher ;
+CREATE TABLE rattacher (idBd int AUTO_INCREMENT NOT NULL,
+idJeux INT NOT NULL,
+PRIMARY KEY (idBd,
+ idJeux) ) ENGINE=InnoDB;
+
+ALTER TABLE Serie ADD CONSTRAINT FK_Serie_idJeux FOREIGN KEY (idJeux) REFERENCES Jeux (idJeux);
+
+ALTER TABLE appartenir ADD CONSTRAINT FK_appartenir_idJeux FOREIGN KEY (idJeux) REFERENCES Jeux (idJeux);
+ALTER TABLE appartenir ADD CONSTRAINT FK_appartenir_idPersonnages FOREIGN KEY (idPersonnages) REFERENCES Personnages (idPersonnages);
+ALTER TABLE rattacher ADD CONSTRAINT FK_rattacher_idBd FOREIGN KEY (idBd) REFERENCES Bd (idBd);
+ALTER TABLE rattacher ADD CONSTRAINT FK_rattacher_idJeux FOREIGN KEY (idJeux) REFERENCES Jeux (idJeux);
