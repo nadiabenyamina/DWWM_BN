@@ -13,23 +13,26 @@ let activeArea = function (id) {
     map.querySelectorAll('.is-active').forEach(function (item) {
         item.classList.remove('is-active');
     });
-    document.querySelector('#list-' + id).classList.add('is-active');
-    document.querySelector('#region-' + id).classList.add('is-active');
+    if (id !== undefined) {
+        document.querySelector('#list-' + id).classList.add('is-active');
+        document.querySelector('#region-' + id).classList.add('is-active');
+    }
 }
 
 paths.forEach(function (path) {
     path.addEventListener('mouseenter', function() {
-        let id = this.id.replace('region-', '');
-        map.querySelectorAll('.is-active').forEach(function (item) {
-            item.classList.remove('is-active');
-        });
-        document.querySelector('#list-' + id).classList.add('is-active');
-        document.querySelector('#region-' + id).classList.add('is-active');
-    });
-});
+        let id = this.id.replace('region-','');
+        activeArea(id);
+    })
+})
 
 links.forEach(function (link) {
     link.addEventListener('mouseenter', function() {
-        let id = this.id.replace('list-', '');
+        let id = this.id.replace('list-','');
+        activeArea(id);
     })
+})
+
+map.addEventListener('mouseover', function() {
+    activeArea();
 })

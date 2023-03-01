@@ -1,17 +1,21 @@
+.map {
+    overflow: hidden;
+}
+
 .map__image {
     width: 50%;
     float: left;
 }
 
 .map__image path {
-    fill: #6cbaff;
+    fill: #94cdfe;
     stroke: white;
     stroke-width: 1px;
     transition: fill 0.3s;
 }
 
 .map__image .is-active path {
-    fill: black;
+    fill: #3538d2;
 }
 
 .map__list {
@@ -26,7 +30,7 @@
 }
 
 .map__list a.is-active {
-    color : black;
+    color : #3538d2;
     font-weight: bold;
     text-decoration: underline;
 }
