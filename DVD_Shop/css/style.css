@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.navbar {
+    background-color: black;
+}
+
+footer {
+    padding-top: 10px;
+    width: 100vw;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer ul li {
+    margin: 0px 10px;    
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+.content {
+    margin: 0px 100px 0px 100px;
+}
+
+/* .carousel-inner {
+    border-radius: 20%;
+    margin: 0px 500px 0px 500px;
+} */
